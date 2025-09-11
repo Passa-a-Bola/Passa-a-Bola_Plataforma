@@ -1,0 +1,68 @@
+/* Variáveis de fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-bebas-neue {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+}
+
+
+/* Variáveis de Cor */
+
+:root{
+  --cor-0: #F9F9F9;
+  --cor-1: #E5E5E5;
+  --cor-2: #898989;
+  --cor-3: #010101;
+  --cor-4: #BA2621;
+  --cor-5: #D45A7B;
+  --cor-6: #DF8FA4;
+  --cor-8: #66AA23;
+  --cor-7: #8FD772
+  --cor-9: #9821BA;
+}
+
+.branco {
+  color: var(--cor-0);
+}
+
+.cinza-claro {
+  color: var(--cor-1);
+}
+
+.cinza-escuro {
+  color: var(--cor-2);
+}
+
+.preto {
+  color: var(--cor-3);
+}
+
+.vermelho {
+  color: var(--cor-4);
+}
+
+.rosa {
+  color: var(--cor-5);
+}
+
+.rosa-claro {
+  color: var(--cor-6);
+}
+
+.verde {
+  color: var(--cor-7);
+}
+
+.verde-claro {
+  color: var(--cor-8);
+}
+
+.roxo {
+  color: var(--cor-9);
+}
