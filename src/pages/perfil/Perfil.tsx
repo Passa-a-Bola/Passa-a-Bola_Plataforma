@@ -1,8 +1,8 @@
-function Home(){
+function Cadastro(){
     return (
         <>
         </>
     )
 }
 
-export default Home
+export default Cadastro

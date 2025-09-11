@@ -1,8 +1,8 @@
-function Home(){
+function Login(){
     return (
         <>
         </>
     )
 }
 
-export default Home
+export default Login

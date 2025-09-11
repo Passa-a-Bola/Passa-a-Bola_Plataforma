@@ -1,8 +1,8 @@
-function Home(){
+function Perfil(){
     return (
         <>
         </>
     )
 }
 
-export default Home
+export default Perfil

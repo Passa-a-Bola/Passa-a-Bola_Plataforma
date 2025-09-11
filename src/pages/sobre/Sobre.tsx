@@ -1,8 +1,8 @@
-function Home(){
+function Sobre(){
     return (
         <>
         </>
     )
 }
 
-export default Home
+export default Sobre
