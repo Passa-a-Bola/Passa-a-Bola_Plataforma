@@ -1,8 +1,9 @@
-function Cadastro(){
+function Perfil(){
     return (
         <>
+            <p>Página de Perfil</p>
         </>
     )
 }
 
-export default Cadastro
+export default Perfil
