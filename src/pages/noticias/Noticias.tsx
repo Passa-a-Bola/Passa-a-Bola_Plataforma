@@ -6,14 +6,14 @@ import iape from "../../assets/iape.jpg";
 
 function Noticias() {
   return (
-    <main className="bg-gray-100 min-h-screen px-4 md:px-12 lg:px-24 py-8">
+    <main className="min-h-screen px-4 md:px-12 lg:px-24 py-8 font-inter">
       <h1 className="text-5xl font-bebas-neue mb-6">NOTÍCIAS</h1>
 
       <div className="flex justify-end mb-8">
         <input
           type="text"
           placeholder="Pesquisa..."
-          className="px-4 py-2 rounded-full border border-white w-64 focus:outline-none bg-[var(--cor-9)] text-white"
+          className="px-4 py-2 rounded-full font-bebas-neue placeholder-white  border-white w-64 focus:outline-none bg-[var(--cor-9)] text-white"
         />
       </div>
 
