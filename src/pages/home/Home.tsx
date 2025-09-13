@@ -1,7 +1,7 @@
 function Home(){
     return (
         <>
-        <p>oieoieoeioe aqfui</p>
+        <p>oieoieoeioe</p>
         </>
     )
 }
