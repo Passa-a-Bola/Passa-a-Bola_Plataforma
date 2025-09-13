@@ -1,6 +1,7 @@
 function Cadastro(){
     return (
         <>
+        <p>Página de Cadastro</p>
         </>
     )
 }

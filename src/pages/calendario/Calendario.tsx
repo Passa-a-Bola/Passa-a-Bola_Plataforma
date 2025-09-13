@@ -1,6 +1,8 @@
 function Calendario(){
     return (
         <>
+        
+        <p>Página de Calendario</p>
         </>
     )
 }

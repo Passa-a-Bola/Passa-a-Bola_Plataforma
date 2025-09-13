@@ -12,9 +12,9 @@ function Footer(){
         <div>
           <h3 className="font-bebas-neue-sub">NOS SIGA EM OUTRAS REDES</h3>
           <ul className="space-y-1">
-            <li><a href="#" className="underline">Instagram</a></li>
-            <li><a href="#" className="underline">YouTube</a></li>
-            <li><a href="#" className="underline">X</a></li>
+            <li><a href="https://www.instagram.com/passaabola/" target="_blank" className="underline">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@passabola" target="_blank" className="underline">YouTube</a></li>
+            <li><a href="https://x.com/passaabola" target="_blank" className="underline">X</a></li>
           </ul>
         </div>
 

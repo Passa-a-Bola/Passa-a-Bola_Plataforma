@@ -33,7 +33,7 @@
 :root{
   --cor-0: #F9F9F9;
   --cor-1: #E5E5E5;
-  --cor-2: #898989;
+  --cor-2: #D9D9D9;
   --cor-3: #010101;
   --cor-4: #BA2621;
   --cor-5: #ec7696;
@@ -51,8 +51,17 @@
   color: var(--cor-1);
 }
 
+.cinza-claro-bg {
+  background-color: var(--cor-1);
+  color: var(--cor-3);
+}
+
 .cinza-escuro {
   color: var(--cor-2);
+}
+
+.preto-bg {
+  background-color: var(--cor-3);
 }
 
 .preto {
@@ -104,7 +113,6 @@
 .underline {
   position: relative;
   display: inline-block;
-  color: #F9F9F9;
   text-decoration: none;
 }
 
