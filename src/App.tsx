@@ -9,6 +9,7 @@ import Calendario from './pages/calendario/Calendario';
 import Noticias from './pages/noticias/Noticias';
 import Perfil from './pages/perfil/Perfil';
 import Sobre from './pages/sobre/Sobre';
+import Materia from './pages/materia/Materia';
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/calendario" element={<Calendario />} />
-        <Route path="/noticias" element={<Noticias />} />
+        <Route path="/noticias" element={<Noticias />}>
+          <Route path="materia" element={<Materia/>} />
+        </Route>
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/sobre" element={<Sobre />} />
       </Routes>
