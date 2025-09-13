@@ -8,7 +8,7 @@ function Header(){  const [isOpen, setIsOpen] = useState(false);
     <div className="header">
       <img src={Headerbg} alt="imagem de header menians do passa a bola fundo roxo" />
       <nav>
-        <div className="navbar rosa-bg font-bebas-neue-sub flex justify-center items-center py-1">
+        <div className="navbar rosa-bg font-bebas-neue-sub flex justify-center items-center py-1 shadow-xl">
           {/*navbar desktop*/}
           <div className="hidden md:flex space-x-16">
             <a href="#" className="underline">Calendário</a>
