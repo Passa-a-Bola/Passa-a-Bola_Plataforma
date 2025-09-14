@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import passaabola from "../../assets/passaabola.png";
+import Partida from '../../components/partida/Partida';
 
 function Calendario(): JSX.Element {
 
@@ -121,6 +122,21 @@ function Calendario(): JSX.Element {
           Dia selecionado: <span className="font-medium">{selectedDay}</span>
         </p>
       </div>
+      <div className='flex flex-wrap mt-2 justify-between m-9'>
+            <Partida/>
+            <Partida/>
+            <Partida/>
+        </div>
+        <div className='flex flex-wrap mt-2 justify-between m-9'>
+            <Partida/>
+            <Partida/>
+            <Partida/>
+        </div>
+        <div className='flex flex-wrap mt-2 justify-between m-9'>
+            <Partida/>
+            <Partida/>
+            <Partida/>
+        </div>
     </>
   );
 }
