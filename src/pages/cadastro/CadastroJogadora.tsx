@@ -33,19 +33,19 @@ function CadastroJogadora() {
                         <input type="password" id="senha" name="senha" placeholder="••••••••" className="w-full rounded-lg p-2 border border-gray-300" required />
                     </div>
 
-                    
+
                     <div>
                         <label htmlFor="telefone" className="block mb-1 text-sm font-medium text-white"> Telefone: </label>
                         <input type="number" id="telefone" name="telefone" placeholder="0000-0000" className="w-full rounded-lg p-2 border border-gray-300" required />
                     </div>
 
-                    
+
                     <div>
                         <label htmlFor="nacionalidade" className="block mb-1 text-sm font-medium text-white"> CPF: </label>
                         <input type="number" id="cpf" name="cpf" placeholder="000.000.000-00" className="w-full rounded-lg p-2 border border-gray-300" required />
                     </div>
 
-                    
+
                     <div>
                         <label htmlFor="nacionalidade" className="block mb-1 text-sm font-medium text-white"> Nacionalidade: </label>
                         <input type="text" id="nacionalidade" name="nacionalidade" placeholder="exemplo: (Brasileira)" className="w-full rounded-lg p-2 border border-gray-300" required />
@@ -56,7 +56,7 @@ function CadastroJogadora() {
                         <input type="date" id="data_nascimento" name="data_nascimento" placeholder="00/00/0000" className="w-full rounded-lg p-2 border border-gray-300" required />
                     </div>
 
-                
+
                     <label htmlFor="termo" className="block mb-1 text-sm font-medium text-white"> Termo de responsabilidade: </label>
                     <div className="bg-white p-3 rounded-md text-sm text-gray-700 max-h-32 overflow-y-auto border">
                         <p>
@@ -72,7 +72,7 @@ function CadastroJogadora() {
                         </p>
                     </div>
 
-              
+
                     <div className="flex items-center gap-2">
                         <input
                             type="checkbox"
@@ -87,9 +87,7 @@ function CadastroJogadora() {
 
 
                     {/* Botão */}
-                    <button
-                        type="submit" className="w-full text-2xl bg-[var(--cor-9)] text-white font-bebas-neue font-bold uppercase rounded-full py-2 hover:bg-purple-700 transition">
-                        Concluído
+                    <button type="submit" className="w-full text-2xl bg-[var(--cor-9)] text-white font-bebas-neue font-bold uppercase rounded-full py-2 hover:bg-purple-700 transition"> Concluído
                     </button>
                 </form>
             </div>

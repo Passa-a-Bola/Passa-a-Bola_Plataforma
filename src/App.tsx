@@ -12,6 +12,9 @@ import Sobre from './pages/sobre/Sobre';
 import CadastroInicio from './pages/cadastro/CadastroInicio';
 import CadastroJogadora from './pages/cadastro/CadastroJogadora';
 import CadastroComum from './pages/cadastro/CadastroComum';
+import FormularioJP from './pages/formulario/Formulario';
+import Contato from './pages/contato/Contato';
+
 
 function App() {
 
@@ -35,6 +38,9 @@ const [logado, setLogado] = useState(false);
           }
         />
         <Route path="/sobre" element={<Sobre />} />
+        <Route path="/formulariojp" element={<FormularioJP/>}/>
+        <Route path="/contato" element={<Contato/>}/>
+    
       </Routes>
       <Footer />
     </Router>
