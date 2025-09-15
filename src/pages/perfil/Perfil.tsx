@@ -1,4 +1,5 @@
 import usuarioTeste from '../../assets/usuarioTeste.png';
+import Partida from "../../components/partida/Partida"
 
 function Perfil() {
   return (
@@ -8,13 +9,13 @@ function Perfil() {
           <img 
             src={usuarioTeste} 
             alt="Foto do usuário" 
-            className="w-60 h-60 rounded-full object-cover mr-8 ml-10"/>
+            className="max-w-32 max-h-32 rounded-full mr-8 ml-10"/>
 
           <div className="flex flex-col justify-center ml-6">
-            <h2 className="text-white text-4xl font-bebas-neue">Nome do Usuário</h2>
-            <p className="text-white text-2xl mt-2 font-bebas-neue">usuario@email.com</p>
+            <h2 className="branco font-bebas-neue-tit">Nome do Usuário</h2>
+            <p className="branco mt-2 font-bebas-neue-sub">usuario@email.com</p>
             <button 
-              className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] text-white text-2xl font-bebas-neue font-bold hover:opacity-90 transition">
+              className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition">
               Editar Perfil
             </button>
           </div>
@@ -86,6 +87,12 @@ function Perfil() {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="mt-4 px-12 flex flex-col md:flex-row justify-between gap-6">
+        <Partida/>
+        <Partida/>
+        <Partida/>
       </div>
     </div>
   );
