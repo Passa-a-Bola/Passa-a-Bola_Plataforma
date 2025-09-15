@@ -1,0 +1,69 @@
+import usuarioTeste from "../../../assets/usuarioTeste.png";
+import Partida from "../../../components/partida/Partida";
+
+interface PerfilProps {
+  setLogado: React.Dispatch<React.SetStateAction<boolean>>;
+  setTipoUsuario: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+function PerfilJogadora({ setLogado, setTipoUsuario }: PerfilProps) {
+  const handleLogout = () => {
+    setLogado(false);
+    setTipoUsuario(null);
+  };
+
+  return (
+    <div className="my-4">
+      <div className="w-full flex items-center justify-between bg-[var(--cor-7)] p-6 pl-12 min-h-64 rounded-lg shadow-lg">
+        <div className="flex items-center">
+          <img
+            src={usuarioTeste}
+            alt="Foto da jogadora"
+            className="max-w-32 max-h-32 rounded-full mr-8 ml-10"
+          />
+          <div className="flex flex-col justify-center ml-6">
+            <h2 className="branco font-bebas-neue-tit">Nome da Jogadora</h2>
+            <p className="branco mt-2 font-bebas-neue-sub">
+              jogadora@email.com
+            </p>
+            <button className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition">
+              Editar Perfil
+            </button>
+          </div>
+        </div>
+
+        <button
+          onClick={handleLogout}
+          className="px-10 py-3 rounded-full bg-[var(--cor-9)] text-white text-2xl font-bebas-neue font-bold hover:opacity-90 transition"
+        >
+          Sair
+        </button>
+      </div>
+
+      <div className="mt-6 flex justify-center">
+        <div className="bg-[var(--cor-9)] rounded-2xl px-12 py-10 w-3/4 shadow-lg text-center">
+          <h3 className="text-white text-2xl font-bebas-neue font-bold">
+            Sobre mim
+          </h3>
+          <p className="text-white text-base mt-2 font-normal">
+            Essa jogadora ainda não adicionou informações
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-12 px-12">
+        <h3 className="text-black text-4xl font-bebas-neue font-bold">
+          Seus jogos salvos:
+        </h3>
+      </div>
+
+      <div className="mt-4 px-12 flex flex-col md:flex-row justify-between gap-6">
+        <Partida />
+        <Partida />
+        <Partida />
+      </div>
+    </div>
+  );
+}
+
+export default PerfilJogadora;
