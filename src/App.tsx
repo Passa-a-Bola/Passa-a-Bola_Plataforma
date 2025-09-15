@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 
 // paginas
 import Home from "./pages/comum/home/Home";
+import HomeJogadora from "./pages/jogadora/homeJogadora/HomeJogadora";
 import Login from "./pages/login/Login";
 import Calendario from "./pages/calendario/Calendario";
 import Noticias from "./pages/noticias/Noticias";
@@ -56,8 +57,18 @@ function App() {
       <ScrollToTop />
       <Header />
 
+      {/* rota home comum */}
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* rota home jogadora */}
+        <Route
+          path="/home-jogadora"
+          element={
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara="jogadora">
+              <HomeJogadora />
+            </PrivateRoute>
+          }
+        />
         <Route
           path="/login"
           element={
@@ -80,6 +91,7 @@ function App() {
         <Route path="/materia" element={<Materia />} />
         <Route path="/resumo" element={<Resumo />} />
 
+        {/* rota de perfil jogadora */}
         <Route
           path="/perfil"
           element={
@@ -91,6 +103,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        {/* rota de perfil comum */}
         <Route
           path="/perfil-comum"
           element={
