@@ -11,6 +11,7 @@ import Perfil from './pages/perfil/Perfil';
 import Sobre from './pages/sobre/Sobre';
 import Materia from './pages/materia/Materia';
 
+
 function App() {
   return (
     <Router>
@@ -30,5 +31,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
