@@ -28,9 +28,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/cadastrocomum" element={<CadastroComum/>} />
         <Route path="/calendario" element={<Calendario />} />
-        <Route path="/noticias" element={<Noticias/>}/>
+        <Route path="/noticias" element={<Noticias />} />
         <Route path="/cadastroinicio" element={<CadastroInicio/>}/>
         <Route path="/cadastrojogadora" element={<CadastroJogadora/>}/>
         <Route
