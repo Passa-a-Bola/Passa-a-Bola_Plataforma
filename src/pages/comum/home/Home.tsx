@@ -1,22 +1,20 @@
-import paulistao from "../../../assets/paulistao.png"
-import Partida from '../../../components/partida/Partida';
-import trofeu from '../../../assets/taca.png'
-import { Link } from "react-router-dom";
+import paulistao   from "../../../assets/paulistao.png"
+import Partida     from '../../../components/partida/Partida';
+import trofeu      from '../../../assets/taca.png'
+import { Link }    from "react-router-dom";
 import copaamerica from "../../../assets/copaamerica.png";
-import flamengo from "../../../assets/flamengo.png";
+import flamengo    from "../../../assets/flamengo.png";
 
 function Home() {
   return (
     <>
     <div className="mx-10 my-5">
-      <div className="flex items-stretch flex-col md:flex-row items-center my-6"  style={{
-  boxShadow: " rgba(0, 0, 0, 0.45) 0px 25px 20px -20px"
-}}>
-        <img src={paulistao} alt="Jogadoras do Corinthians comemorando no Paulistão Feminino" className="md:w-1/2 object-cover max-h-60" 
-        />
+      <div className="flex items-stretch flex-col md:flex-row items-center my-6"
+           style={{boxShadow: " rgba(0, 0, 0, 0.45) 0px 25px 20px -20px"}}>
+        <img src={paulistao} alt="Jogadoras do Corinthians comemorando no Paulistão Feminino" className="md:w-1/2 object-cover max-h-60"/>
 
         <div className="w-full flex flex-col roxo-bg justify-center p-4 space-y-1">
-            <img src={trofeu} alt="logo passa a bola" className="max-w-12"/>
+            <img src={trofeu} alt="ícone de taça troféu" className="max-w-12"/>
           <p className="font-bebas-neue-tit md:text-left ">ACOMPANHE O PAULISTÃO FEMININO AQUI!</p>
           <p className="font-inter">Saiba todas as atualizações, futuras partidas e times classificados do campeonato </p>
         </div>
@@ -39,13 +37,8 @@ function Home() {
             className="w-full md:w-56 h-36 object-cover"
           />
           <div className="flex-1">
-            <Link to="/materia" className="text-lg md:text-xl font-semibold hover:underline">
-              Em Natal, Antonia Silva comemora convocação para a Copa América
-            </Link>
-            <p className="text-sm text-gray-700 mt-1">
-              Medalhista olímpica é convocada por Arthur Elias. Defensora do Real Madrid recebe título de
-              Cidadã Natalense em sessão solene na Arena das Dunas
-            </p>
+            <Link to="/materia" className="text-lg md:text-xl font-semibold hover:underline">Em Natal, Antonia Silva comemora convocação para a Copa América</Link>
+            <p className="text-sm text-gray-700 mt-1">Medalhista olímpica é convocada por Arthur Elias. Defensora do Real Madrid recebe título de Cidadã Natalense em sessão solene na Arena das Dunas</p>
             <p className="text-xs text-gray-500 mt-2">09/06/2025 18h18</p>
           </div>
         </div>

@@ -100,6 +100,7 @@ function App() {
         <Route path="/cadastroinicio" element={<CadastroInicio />} />
         <Route path="/cadastrojogadora" element={<CadastroJogadora />} />
         <Route path="/calendario" element={<Calendario />} />
+        <Route path="/contato" element={<Contato />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/formulariojp" element={<FormularioJP />} />
