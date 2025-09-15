@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Link } from "react-router-dom"
 import icon from "../../assets/icon_logo.png"
 
 function Footer(){
@@ -28,8 +29,8 @@ function Footer(){
         </div>
 
         <div>
-          <h3 className="font-bebas-neue-sub">CONTATO</h3>
-          <a href="mailto:passaabola@contato.com" className="underline">passaabola@contato.com</a>
+          <h3 className="font-bebas-neue-sub">Fale com a gente!</h3>
+          <Link to="/contato" className="underline">Contato</Link>
         </div>
 
         <div className="md:flex md:justify-end items-end mt-4 md:mt-0">
