@@ -81,14 +81,14 @@ function Sobre() {
           <div className="text-center">
             <h2 className="text-4xl font-bebas-neue mb-6">Acompanhe também:</h2>
             <div className="flex justify-center gap-8">
-              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@passabola" target="_blank" rel="noopener noreferrer">
                 <img
                   src={youtube}
                   alt="YouTube"
                   className="w-45 h-40"
                 />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/passaabola/" target="_blank" rel="noopener noreferrer">
                 <img
                   src={insta}
                   alt="Instagram"
