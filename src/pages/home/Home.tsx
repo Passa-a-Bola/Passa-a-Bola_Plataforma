@@ -28,7 +28,7 @@ function Home() {
         <Partida/>
       </div>
     </div>
-    <section className="mt-8 ml-8">
+    <section className="mt-8 ml-8 font-inter">
       <h2 className="text-xl md:text-2xl font-bold mb-4">Principais Notícias</h2>
 
       <div className="space-y-6">

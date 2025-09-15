@@ -1,11 +1,10 @@
 import './App.css';
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
-import Cadastro from './pages/cadastro/Cadastro';
 import Calendario from './pages/calendario/Calendario';
 import Noticias from './pages/noticias/Noticias';
 import Perfil from './pages/perfil/Perfil';
@@ -18,12 +17,23 @@ import Contato from './pages/contato/Contato';
 import Materia from './pages/materia/Materia';
 import Resumo from './pages/resumo/Resumo';
 
+// iniciar a nova págian sempre no inicio
+function ScrollToTop() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return null;
+}
 
 function App() {
   const [logado, setLogado] = useState(false);
 
   return (
     <Router>
+      <ScrollToTop/>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

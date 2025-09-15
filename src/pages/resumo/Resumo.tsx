@@ -16,7 +16,7 @@ function Resumo() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 flex flex-col items-center px-4 py-6">
+    <main className="min-h-screen bg-gray-100 flex flex-col items-center px-10 py-5">
         <button
             onClick={handleBack}
             aria-label="Voltar"
@@ -64,12 +64,12 @@ function Resumo() {
         />
       </div>
 
-      <section className="max-w-3xl bg-white rounded-xl shadow-md p-6 mb-6">
-        <h2 className="text-2xl font-bold text-center mb-6">RESUMO DO JOGO</h2>
+      <section className="max-w-3xl bg-white rounded-xl font-inter shadow-md p-6 mb-6">
+        <h2 className="text-2xl font-bebas-neue-tit text-center mb-6">RESUMO DO JOGO</h2>
 
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-bold mb-2">PRIMEIRO TEMPO</h3>
+            <h3 className="text-lg font-bebas-neue-tit mb-2">PRIMEIRO TEMPO</h3>
             <p className="text-gray-700 mb-2">
                 O duelo entre Brasil e Espanha começou muito equilibrado, com as duas 
                 seleções buscando o ataque desde os primeiros minutos. A Espanha abriu o 
@@ -86,7 +86,7 @@ function Resumo() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-2">ETAPA FINAL</h3>
+            <h3 className="text-lg font-bebas-neue-tit mb-2">ETAPA FINAL</h3>
             <p className="text-gray-700 mb-2">
                 No segundo tempo, o Brasil voltou mais ofensivo, pressionando 
                 alto e tentando empatar. Aos 57 minutos, a seleção brasileira 
@@ -103,22 +103,22 @@ function Resumo() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-2">TABELA E AGENDA</h3>
+            <h3 className="text-lg font-bebas-neue-tit mb-2">TABELA E AGENDA</h3>
             <p className="text-gray-700 mb-2">
                 Resultado: Espanha 2 x 1 Brasil
             </p>
             <p className="text-gray-700">
-                Próximos jogos do Brasil (feminino):
+                Próximos jogos do Brasil (feminino): <br/>
 
-                Dia 20/09: Brasil x Alemanha
+                Dia 20/09: Brasil x Alemanha<br/>
 
-                Dia 25/09: Brasil x Argentina
+                Dia 25/09: Brasil x Argentina<br/>
 
-                Próximos jogos da Espanha (feminino):
+                Próximos jogos da Espanha (feminino):<br/>
 
-                Dia 21/09: Espanha x Itália
+                Dia 21/09: Espanha x Itália<br/>
 
-                Dia 26/09: Espanha x França
+                Dia 26/09: Espanha x França<br/>
             </p>
           </div>
         </div>
