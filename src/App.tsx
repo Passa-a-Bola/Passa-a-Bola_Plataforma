@@ -10,6 +10,7 @@ import Noticias from './pages/noticias/Noticias';
 import Perfil from './pages/perfil/Perfil';
 import Sobre from './pages/sobre/Sobre';
 import Materia from './pages/materia/Materia';
+import Resumo from './pages/resumo/Resumo';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/materia" element={<Materia />} /> 
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/sobre" element={<Sobre />} />
+        <Route path="/resumo" element={<Resumo />}/>
       </Routes>
       <Footer />
     </Router>

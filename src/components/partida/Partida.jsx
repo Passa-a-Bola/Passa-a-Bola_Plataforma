@@ -1,5 +1,6 @@
 import juventude from "../../assets/juventude.png"
 import gremio from "../../assets/gremio.png"
+import { Link } from "react-router-dom";
 
 function Partida(){
   return (
@@ -28,7 +29,7 @@ function Partida(){
       </div>
       <hr class="border-t border-black preto-bg"/>
       <div className="border-t px-4 py-2 text-center">
-        <a href="#" className="underline font-bebas-neue-sub preto">SAIBA O QUE ROLOU →</a>
+        <Link to="/resumo" className="underline font-bebas-neue-sub preto">SAIBA O QUE ROLOU →</Link>
       </div>
     </div>
   )
