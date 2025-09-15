@@ -1,5 +1,5 @@
 import paulistao from "../../assets/paulistao.png";
-import Partida from '../../components/partida/Partida';
+import Partida from '../../../components/partida/Partida';
 import trofeu from '../../assets/taca.png'
 import { Link } from "react-router-dom";
 import copaamerica from "../../assets/copaamerica.png";
