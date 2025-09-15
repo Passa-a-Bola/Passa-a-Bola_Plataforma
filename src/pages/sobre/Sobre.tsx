@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import estadio from "../../assets/estadio.png";
 import meninas from "../../assets/meninas.png";
 import entrevista from "../../assets/entrevista.png";
@@ -9,7 +10,7 @@ import youtube from "../../assets/youtube.png";
 function Sobre() {
   return (
     <>
-      <main className="bg-white text-black">
+      <main className="bg-white text-black font-inter">
         <section className="max-w-6xl mx-auto px-4 py-12">
 
           <h1 className="text-6xl font-bebas-neue mb-4 uppercase">A casa das mulheres no futebol</h1>
@@ -47,6 +48,7 @@ function Sobre() {
                 className="w-40 h-40 object-cover rounded-full border-l-8 border-b-2 border-purple-700"
               />
               <div>
+                <p className="text-4xl text-purple-700 font-bebas-neue">ALÊ XAVIER</p>
                 <p className="mb-2">
                   Alê Xavier é jornalista, apresentadora e ex-jogadora de futebol. 
                   Ficou conhecida por seu trabalho no Desimpedidos, onde foi a primeira 
@@ -54,7 +56,6 @@ function Sobre() {
                   em dar visibilidade ao futebol feminino. Com carisma e conhecimento, Alê usa sua 
                   trajetória para transformar o esporte e ampliar o espaço das mulheres no futebol.
                 </p>
-                <p className="text-4xl text-purple-700 font-bebas-neue">ALÊ XAVIER</p>
               </div>
             </div>
           </div>
@@ -67,13 +68,13 @@ function Sobre() {
                 className="w-40 h-40 object-cover rounded-full border-l-8 border-b-2 border-purple-700"
               />
               <div>
+                <p className=" text-4xl text-purple-700 font-bebas-neue text-right md:text-left">LUANA MALUF</p>
                 <p className="mb-2">
                   Luana Maluf é comentarista esportiva e cofundadora do canal Passa a Bola. 
                   Já atuou na ESPN, Band e hoje comenta jogos no Prime Video. Apaixonada por futebol 
                   feminino, usa sua voz para promover representatividade, debater desigualdades e 
                   fortalecer o esporte para as minas.
                 </p>
-                <p className=" text-4xl text-purple-700 font-bebas-neue text-right md:text-left">LUANA MALUF</p>
               </div>
             </div>
           </div>
@@ -97,6 +98,11 @@ function Sobre() {
               </a>
             </div>
           </div>
+          <div className="flex flex-col justify-center items-center m-5">
+            <p className="text-center m-2">Tem alguma sugestão, ideia ou crítica? Manda uma mensagem pra gente!</p>
+            <Link to="/contato" className="rosa-bg p-2  rounded font-bebas-neue-sub">Fale conosco!</Link>
+          </div>
+
         </section>
       </main>
     </>
