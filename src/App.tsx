@@ -25,7 +25,7 @@ import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
 import Aovivo from "./pages/aovivo/Aovivo";
 import Loja from "./pages/loja/Loja";
-import Teste from "./pages/produto/Teste";
+import Teste from "./pages/calendario/Api";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
