@@ -23,6 +23,7 @@ import FormularioJP from "./pages/formulario/Formulario";
 import Contato from "./pages/contato/Contato";
 import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
+import Aovivo from "./pages/aovivo/Aovivo";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
@@ -48,6 +49,22 @@ function PrivateRoute({
   return <>{children}</>;
 }
 
+// componente que redireciona de acordo com tipo d usuario
+interface RedirectBasedOnUserProps {
+  tipoUsuario: string | null;
+  comumElement: ReactNode;
+  jogadoraElement: ReactNode;
+}
+
+function RedirectBasedOnUser({
+  tipoUsuario,
+  comumElement,
+  jogadoraElement,
+}: RedirectBasedOnUserProps) {
+  if (tipoUsuario === "jogadora") return <>{jogadoraElement}</>;
+  return <>{comumElement}</>; // se não logado ou tipo comum
+}
+
 function App() {
   const [logado, setLogado] = useState(false);
   const [tipoUsuario, setTipoUsuario] = useState<string | null>(null);
@@ -57,18 +74,18 @@ function App() {
       <ScrollToTop />
       <Header />
 
-      {/* rota home comum */}
+      {/* home com diferenciacao de usuario */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        {/* rota home jogadora */}
         <Route
-          path="/home-jogadora"
+          path="/"
           element={
-            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara="jogadora">
-              <HomeJogadora />
-            </PrivateRoute>
-          }
-        />
+            <RedirectBasedOnUser
+              tipoUsuario={tipoUsuario}
+              comumElement={<Home />}
+              jogadoraElement={<HomeJogadora />}
+            />
+          }/>
+
         <Route
           path="/login"
           element={
@@ -84,14 +101,14 @@ function App() {
         <Route path="/cadastroinicio" element={<CadastroInicio />} />
         <Route path="/cadastrojogadora" element={<CadastroJogadora />} />
         <Route path="/calendario" element={<Calendario />} />
+        <Route path="/contato" element={<Contato />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/formulariojp" element={<FormularioJP />} />
-        <Route path="/contato" element={<Contato />} />
         <Route path="/materia" element={<Materia />} />
         <Route path="/resumo" element={<Resumo />} />
+        <Route path="/aovivo" element={<Aovivo />} />
 
-        {/* rota de perfil jogadora */}
         <Route
           path="/perfil"
           element={
@@ -103,7 +120,6 @@ function App() {
             </PrivateRoute>
           }
         />
-        {/* rota de perfil comum */}
         <Route
           path="/perfil-comum"
           element={
