@@ -108,13 +108,13 @@ function Resumo() {
                 Resultado: Espanha 2 x 1 Brasil
             </p>
             <p className="text-gray-700">
-                Próximos jogos do Brasil (feminino): <br/>
+                Próximos jogos do Brasil (feminino): <br/><br />
 
                 Dia 20/09: Brasil x Alemanha<br/>
 
-                Dia 25/09: Brasil x Argentina<br/>
+                Dia 25/09: Brasil x Argentina<br/><br />
 
-                Próximos jogos da Espanha (feminino):<br/>
+                Próximos jogos da Espanha (feminino):<br/><br />
 
                 Dia 21/09: Espanha x Itália<br/>
 
