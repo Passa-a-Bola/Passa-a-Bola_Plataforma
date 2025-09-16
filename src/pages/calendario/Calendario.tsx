@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import passaabola from "../../assets/passaabola.png";
 import Partida from '../../components/partida/Partida';
+import Partida2tipo from '../../components/partida/Partida2tipo';
 
-function Calendario(): JSX.Element {
+function Calendario() {
 
     const days = Array.from({ length: 31 }, (_, i) => (1 + i).toString());
     const [startIndex, setStartIndex] = useState<number>(0);
@@ -73,6 +74,12 @@ function Calendario(): JSX.Element {
           Saiba as datas e horários dos jogos aqui
         </p>
 
+        <h1 className="text-2xs font-bold text-center text-white p-8">
+          <span className="bg-[var(--cor-8)] px-2 rounded">
+            Maio - 2025
+          </span>
+        </h1>
+
         <div className="flex items-center justify-center">
           <button
             onClick={handlePrev}
@@ -122,20 +129,23 @@ function Calendario(): JSX.Element {
           Dia selecionado: <span className="font-medium">{selectedDay}</span>
         </p>
       </div>
-      <div className='flex flex-wrap mt-2 justify-between m-9'>
+      <div className='flex flex-wrap justify-between m-9'>
             <Partida/>
             <Partida/>
             <Partida/>
         </div>
-        <div className='flex flex-wrap mt-2 justify-between m-9'>
+        <hr />
+        <div className='flex flex-wrap justify-between m-9'>
             <Partida/>
             <Partida/>
             <Partida/>
         </div>
-        <div className='flex flex-wrap mt-2 justify-between m-9'>
-            <Partida/>
-            <Partida/>
-            <Partida/>
+        <hr />
+        <h2 className="text-lg font-bebas-neue-tit m-6">Jogos que você não pode perder</h2>
+        <div className='flex flex-wrap justify-between m-9'>
+            <Partida2tipo/>
+            <Partida2tipo/>
+            <Partida2tipo/>
         </div>
     </>
   );

@@ -39,8 +39,8 @@
   --cor-4: #BA2621;
   --cor-5: #ec7696;
   --cor-6: #fcadc2;
-  --cor-8: #66AA23;
-  --cor-7: #8FD772;
+  --cor-7: #C2F6AE;
+  --cor-8: #66B547;
   --cor-9: #9821BA;
   --cor-10: #b32349;
 }
@@ -92,11 +92,18 @@
 }
 
 .verde {
-  color: var(--cor-7);
+  color: var(--cor-8);
+}
+
+.verde-bg {
+  background-color: var(--cor-8);
 }
 
 .verde-claro {
-  color: var(--cor-8);
+  color: var(--cor-7);
+}
+.verde-claro-bg {
+  background-color: var(--cor-7);
 }
 
 .roxo {
