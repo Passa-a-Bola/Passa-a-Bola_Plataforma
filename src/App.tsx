@@ -23,6 +23,7 @@ import FormularioJP from "./pages/formulario/Formulario";
 import Contato from "./pages/contato/Contato";
 import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
+import Aovivo from "./pages/aovivo/Aovivo";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
@@ -90,6 +91,7 @@ function App() {
         <Route path="/contato" element={<Contato />} />
         <Route path="/materia" element={<Materia />} />
         <Route path="/resumo" element={<Resumo />} />
+        <Route path="/aovivo" element={<Aovivo />} />
 
         {/* rota de perfil jogadora */}
         <Route
