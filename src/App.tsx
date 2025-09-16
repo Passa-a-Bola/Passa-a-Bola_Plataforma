@@ -24,6 +24,7 @@ import Contato from "./pages/contato/Contato";
 import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
 import Aovivo from "./pages/aovivo/Aovivo";
+import Notificacao from "./pages/notificacao/Notificacao";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
@@ -32,10 +33,10 @@ function ScrollToTop() {
   return null;
 }
 
-// validacao de usuario comum ou jogadora
+// validacao de usuario privado (agora permite varios tipos)
 interface PrivateRouteProps {
   tipoUsuario: string | null;
-  permitidoPara: string;
+  permitidoPara: string[]; // array de tipos permitidos
   children: ReactNode;
 }
 
@@ -45,11 +46,11 @@ function PrivateRoute({
   children,
 }: PrivateRouteProps) {
   if (!tipoUsuario) return <Navigate to="/login" replace />;
-  if (tipoUsuario !== permitidoPara) return <Navigate to="/login" replace />;
+  if (!permitidoPara.includes(tipoUsuario)) return <Navigate to="/login" replace />;
   return <>{children}</>;
 }
 
-// componente que redireciona de acordo com tipo d usuario
+// componente que redireciona de acordo com tipo de usuario
 interface RedirectBasedOnUserProps {
   tipoUsuario: string | null;
   comumElement: ReactNode;
@@ -84,7 +85,8 @@ function App() {
               comumElement={<Home />}
               jogadoraElement={<HomeJogadora />}
             />
-          }/>
+          }
+        />
 
         <Route
           path="/login"
@@ -109,10 +111,24 @@ function App() {
         <Route path="/resumo" element={<Resumo />} />
         <Route path="/aovivo" element={<Aovivo />} />
 
+        {/* rota notificações acessível para qualquer usuário logado */}
+        <Route 
+          path="/notificacao" 
+          element={
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["comum", "jogadora"]}>
+              <Notificacao
+                setLogado={setLogado}
+                setTipoUsuario={setTipoUsuario}
+              />
+            </PrivateRoute>
+          }
+        />
+
+        {/* perfil jogadora */}
         <Route
           path="/perfil"
           element={
-            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara="jogadora">
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["jogadora"]}>
               <PerfilJogadora
                 setLogado={setLogado}
                 setTipoUsuario={setTipoUsuario}
@@ -120,10 +136,12 @@ function App() {
             </PrivateRoute>
           }
         />
+
+        {/* perfil comum */}
         <Route
           path="/perfil-comum"
           element={
-            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara="comum">
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["comum"]}>
               <PerfilComum
                 setLogado={setLogado}
                 setTipoUsuario={setTipoUsuario}

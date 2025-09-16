@@ -1,18 +1,35 @@
-import Headerbg from "../../assets/header-background.png"
-import "./Header.css"
+import Headerbg from "../../assets/header-background.png";
+import Notificacao from "../../assets/Notificacao.png";
+import "./Header.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function Header(){  const [isOpen, setIsOpen] = useState(false);
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="header">
+    <div className="header relative">
       <Link to="/">
-        <img src={Headerbg} alt="imagem de header menians do passa a bola fundo roxo" />
+        <img
+          src={Headerbg}
+          alt="Imagem de fundo do header"
+          className="w-full h-full object-cover"
+        />
       </Link>
+
+      <div className="absolute top-4 right-4 m-6">
+        <Link to="/notificacao">
+        <img
+          src={Notificacao}
+          alt="Ícone de notificação"
+          className="w-10 h-10"
+          />
+          </Link>
+      </div>
+
       <nav>
         <div className="navbar rosa-bg font-bebas-neue-sub flex justify-center items-center py-1 shadow-xl">
-          {/*navbar desktop*/}
+          {/* Navbar Desktop */}
           <div className="hidden md:flex space-x-16">
             <Link to="/calendario" className="underline">Calendário</Link>
             <Link to="/noticias" className="underline">Notícias</Link>
@@ -20,7 +37,7 @@ function Header(){  const [isOpen, setIsOpen] = useState(false);
             <Link to="/perfil" className="underline">Perfil</Link>
           </div>
 
-          {/*hamburger mobile */}
+          {/* Hamburger Mobile */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
               {isOpen ? "X" : "☰"}
@@ -28,9 +45,9 @@ function Header(){  const [isOpen, setIsOpen] = useState(false);
           </div>
         </div>
 
-        {/* menu mobile */}
+        {/* Menu Mobile */}
         {isOpen && (
-          <div className=" rosa-bg font-bebas-neue items-center md:hidden flex flex-col space-y-2 ">
+          <div className="rosa-bg font-bebas-neue items-center md:hidden flex flex-col space-y-2">
             <Link to="/calendario" className="underline">Calendário</Link>
             <Link to="/noticias" className="underline">Notícias</Link>
             <Link to="/sobre" className="underline">Sobre nós</Link>
@@ -42,4 +59,4 @@ function Header(){  const [isOpen, setIsOpen] = useState(false);
   );
 }
 
-export default Header
+export default Header;
