@@ -49,6 +49,10 @@
   color: var(--cor-0);
 }
 
+.branco-bg {
+  background-color: var(--cor-0);
+}
+
 .cinza-claro {
   color: var(--cor-1);
 }
@@ -134,4 +138,29 @@
 
 .underline:hover::after {
   transform: scaleX(1);
+}
+
+.botao {
+  color: white;
+  border-radius: 50; 
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.botao:hover {  
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  filter: brightness(1.2);  
+  color: #b32349;
+}
+
+.saltar {
+  transition: all 0.4s ease-in-out;
+}
+
+.saltar:hover {
+  transform: scale(1.05);
 }
