@@ -129,20 +129,21 @@ function Calendario() {
           Dia selecionado: <span className="font-medium">{selectedDay}</span>
         </p>
       </div>
-      <div className='flex flex-wrap justify-between m-9'>
-            <Partida/>
-            <Partida/>
-            <Partida/>
+      <div className="flex flex-wrap justify-center m-9 gap-4">
+          <Partida />
+          <Partida />
+          <Partida />
         </div>
         <hr />
-        <div className='flex flex-wrap justify-between m-9'>
-            <Partida/>
-            <Partida/>
-            <Partida/>
+        <div className="flex flex-wrap justify-center m-9" gap-4>
+          <Partida />
+          <Partida />
+          <Partida />
         </div>
+
         <hr />
         <h2 className="text-lg font-bebas-neue-tit m-6">Jogos que você não pode perder</h2>
-        <div className='flex flex-wrap justify-between m-9'>
+        <div className='flex flex-wrap justify-between m-9' gap-4>
             <Partida2tipo/>
             <Partida2tipo/>
             <Partida2tipo/>

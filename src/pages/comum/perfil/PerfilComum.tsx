@@ -14,8 +14,6 @@ import Antonia from "../../../assets/Antonia.png";
 import Bruninha from "../../../assets/Bruninha.png";
 import BrunaCalderan from "../../../assets/BrunaCalderan.png";
 
-
-
 interface PerfilProps {
   setLogado: React.Dispatch<React.SetStateAction<boolean>>;
   setTipoUsuario: React.Dispatch<React.SetStateAction<string | null>>;
@@ -28,18 +26,18 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
   };
 
   return (
-    <div className="my-4">
+    <div className="m-4">
       {/* Header do Perfil */}
-      <div className="w-full flex items-center justify-between bg-[var(--cor-7)] p-6 pl-12 min-h-64 rounded-lg shadow-lg">
-        <div className="flex items-center">
+      <div className="w-full flex flex-col md:flex-row items-center md:items-center justify-between bg-[var(--cor-7)] p-6 pl-6 md:pl-12 min-h-64 rounded-lg shadow-lg">
+        <div className="flex flex-col md:flex-row items-center md:items-center">
           <img
-            src={usuarioTeste}
             alt="Foto do usuário"
-            className="max-w-32 max-h-32 rounded-full mr-8 ml-10"
+            className="max-w-32 max-h-32 rounded-full mx-auto md:mx-0 md:mr-8 mb-4 md:mb-0"
+            src="/src/assets/usuarioTeste.png"
           />
-          <div className="flex flex-col justify-center ml-6">
-            <h2 className="branco font-bebas-neue-tit">Nome do Usuário</h2>
-            <p className="branco mt-2 font-bebas-neue-sub">usuario@email.com</p>
+          <div className="flex flex-col justify-center ml-0 md:ml-6 text-center md:text-left">
+            <h2 className="preto font-bebas-neue-tit">Nome do Usuário</h2>
+            <p className="preto mt-2 font-bebas-neue-sub">usuario@email.com</p>
             <button className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition">
               Editar Perfil
             </button>
@@ -48,15 +46,15 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
 
         <button
           onClick={handleLogout}
-          className="px-10 py-3 rounded-full bg-[var(--cor-9)] text-white text-2xl font-bebas-neue font-bold hover:opacity-90 transition"
+          className="mt-6 md:mt-0 px-10 py-3 rounded-full bg-[var(--cor-9)] text-white text-2xl font-bebas-neue font-bold hover:opacity-90 transition"
         >
           Sair
         </button>
       </div>
 
       {/* Sobre mim */}
-      <div className="mt-6 flex justify-center">
-        <div className="bg-[var(--cor-9)] rounded-2xl px-12 py-10 w-3/4 shadow-lg text-center">
+      <div className="mt-6 flex justify-center px-6">
+        <div className="bg-[var(--cor-9)] rounded-2xl px-6 md:px-12 py-10 w-full md:w-3/4 shadow-lg text-center">
           <h3 className="text-white text-2xl font-bebas-neue font-bold">
             Sobre mim
           </h3>
@@ -67,70 +65,66 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
       </div>
 
       {/* Jogos salvos */}
-      <div className="mt-12 px-12">
+      <div className="mt-12 px-6 md:px-12">
         <h3 className="text-black text-4xl font-bebas-neue font-bold">
           Seus jogos salvos:
         </h3>
       </div>
 
-      <div className="mt-4 px-12 flex flex-col md:flex-row justify-between gap-6">
+      <div className="mt-4 px-6 md:px-12 flex flex-col md:flex-row justify-between gap-6">
         <Partida />
         <Partida />
         <Partida />
       </div>
 
       {/* Time favorito */}
-      <div className="mt-12 px-12">
+      <div className="mt-12 px-6 md:px-12">
         <h3 className="text-purple-600 text-4xl font-bebas-neue font-bold">
           Seu time favorito: Time X
         </h3>
       </div>
 
       {/* Notícias */}
-      <div className="mt-12 px-12">
-        <h3 className="text-black text-4xl font-bebas-neue font-bold">
-          Notícias
-        </h3>
+      <div className="mt-12 px-6 md:px-12">
+        <h3 className="text-black text-4xl font-bebas-neue font-bold">Notícias</h3>
 
-        <div className="mt-6 grid md:grid-cols-2 gap-6">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card Dudinha */}
-          <div className="flex items-center gap-4 bg-[var(--cor-5)] shadow-md overflow-hidden rounded-lg">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 bg-[var(--cor-5)] shadow-md overflow-hidden rounded-lg">
             <img
               src={dudinha}
               alt="Notícia"
-              className="w-full h-40 object-cover ml-2"
+              className="w-full md:w-48 h-40 object-cover ml-0 md:ml-2 rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
             />
-            <div className="p-4">
+            <div className="p-4 text-center md:text-left">
               <Link
                 to="/materia"
-                className="hover:text-white transition-colors duration-300 text-2xl"
+                className="hover:text-white transition-colors duration-300 text-2xl block"
               >
                 Elogiada por Marta e Formiga: Conheça Dudinha
               </Link>
-              <p className="text-sm text-white">
-                Jogadora do São Paulo marcou dois dos três gols na vitória da
-                Seleção contra as japonesas
+              <p className="text-sm text-white mt-2">
+                Jogadora do São Paulo marcou dois dos três gols na vitória da Seleção contra as japonesas
               </p>
             </div>
           </div>
 
           {/* Card Parceria */}
-          <div className="flex items-center gap-4 bg-[var(--cor-5)] shadow-md overflow-hidden rounded-lg">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 bg-[var(--cor-5)] shadow-md overflow-hidden rounded-lg">
             <img
               src={parceria}
               alt="Notícia"
-              className="w-full h-40 object-cover ml-2"
+              className="w-full md:w-48 h-40 object-cover ml-0 md:ml-2 rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
             />
-            <div className="p-4">
+            <div className="p-4 text-center md:text-left">
               <Link
                 to="/materia"
-                className="hover:text-white transition-colors duration-300 text-2xl"
+                className="hover:text-white transition-colors duration-300 text-2xl block"
               >
                 “Parceria de Sucesso”: Dupla Ex-Corinthians fortalece relação
               </Link>
-              <p className="text-sm text-white">
-                Arthur Elias e Cris Gambaré trocam experiências há dez anos e
-                buscam evoluir o futebol feminino
+              <p className="text-sm text-white mt-2">
+                Arthur Elias e Cris Gambaré trocam experiências há dez anos e buscam evoluir o futebol feminino
               </p>
             </div>
           </div>
@@ -138,23 +132,23 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
       </div>
 
       {/* Jogos */}
-      <div className="mt-12 px-12">
+      <div className="mt-12 px-6 md:px-12">
         <h3 className="text-black text-4xl font-bebas-neue font-bold">Jogos</h3>
       </div>
 
-      <div className="mt-4 px-12 flex flex-col md:flex-row justify-between gap-6">
+      <div className="mt-4 px-6 md:px-12 flex flex-col md:flex-row justify-between gap-6">
         <Partida />
         <Partida />
         <Partida />
       </div>
 
       {/* Jogadoras Favoritas */}
-      <div className="mt-12 px-12">
+      <div className="mt-12 px-6 md:px-12">
         <h3 className="text-black text-4xl font-bebas-neue font-bold">
           Jogadoras Favoritas
         </h3>
 
-        <div className="mt-4 flex justify-center gap-20 flex-wrap max-w-[1200px] mx-auto">
+        <div className="mt-4 flex justify-center gap-10 md:gap-20 flex-wrap max-w-[1200px] mx-auto">
           <Card
             numero="99"
             posicao="RB"
@@ -195,4 +189,3 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
 }
 
 export default PerfilComum;
-

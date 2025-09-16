@@ -1,6 +1,6 @@
 function Contato() {
   return (
-       <div className="py-8">
+       <div className="p-8">
       <div className="text-center mb-8">
         <h1 className="text-2xl md:text-4xl font-bebas-neue font-bold text-black">CONTATO</h1>
         <p className="mt-2 text-sm text-gray-700 max-w-2xl mx-auto font-inter">
