@@ -1,4 +1,4 @@
-import usuarioTeste from '../../assets/usuarioTeste.png';
+import usuarioTeste from '../../../assets/usuarioTeste.png';
 import Partida from "../../components/partida/Partida"
 
 function Perfil() {
