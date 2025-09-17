@@ -35,6 +35,33 @@ https://typebot.co/passa-a-bola-s5yu65e
 
 ---
 
+## 📌 Descrição dos pontos de acesso à API
+
+###  Endpoint: Ligas de Futebol
+
+* **URL:** `https://v3.football.api-sports.io/leagues`
+* **Método:** `GET`
+* **Descrição:** Retorna uma lista de ligas de futebol, com informações como nome da liga, país e logo.
+* **Headers obrigatórios:**
+
+  ```http
+  "x-apisports-key": "SUA_CHAVE_AQUI"
+  ```
+* **Exemplo de uso (fetch):**
+
+  ```javascript
+  fetch("https://v3.football.api-sports.io/leagues", {
+    method: "GET",
+    headers: {
+      "x-apisports-key": "SUA_CHAVE_AQUI"
+    }
+  })
+    .then(res => res.json())
+    .then(data => console.log(data.response));
+  ```
+* **Parâmetros opcionais:** Nenhum obrigatório para o seu uso atual, mas a API permite filtrar por `id`, `country` ou `season`.
+
+---
 ## 👥 Nossa Equipe  
 
 O projeto foi desenvolvido pelos estudantes da **FIAP**:  
