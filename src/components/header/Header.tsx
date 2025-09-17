@@ -1,4 +1,6 @@
 import Headerbg from "../../assets/header-background.png";
+import Notificacao from "../../assets/Notificacao.png";
+
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -16,6 +18,13 @@ function Header() {
           className="w-full h-full object-cover"
         />
       </Link>
+
+
+      <div className="absolute top-4 right-4 m-6">
+        <Link to="/notificacao">
+        <img
+          src={Notificacao}
+          alt="Ícone de notificação"
 
       <div className="absolute top-4 left-4 m-6">
         <Link to="/loja">

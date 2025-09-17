@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "r
 // componentes
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import TypebotButton from "./components/typebotbutton/TypebotButton";
 
 // paginas
 import Home from "./pages/comum/home/Home";
@@ -24,6 +25,8 @@ import Contato from "./pages/contato/Contato";
 import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
 import Aovivo from "./pages/aovivo/Aovivo";
+import Notificacao from "./pages/notificacao/Notificacao";
+import Configuracao from "./pages/configuracao/Configuracao";
 import Loja from "./pages/loja/Loja";
 import Produto from "./pages/produto/Produto";
 
@@ -34,10 +37,10 @@ function ScrollToTop() {
   return null;
 }
 
-// validacao de usuario comum ou jogadora
+// validacao de usuario privado (agora permite varios tipos)
 interface PrivateRouteProps {
   tipoUsuario: string | null;
-  permitidoPara: string;
+  permitidoPara: string[]; // array de tipos permitidos
   children: ReactNode;
 }
 
@@ -47,11 +50,11 @@ function PrivateRoute({
   children,
 }: PrivateRouteProps) {
   if (!tipoUsuario) return <Navigate to="/login" replace />;
-  if (tipoUsuario !== permitidoPara) return <Navigate to="/login" replace />;
+  if (!permitidoPara.includes(tipoUsuario)) return <Navigate to="/login" replace />;
   return <>{children}</>;
 }
 
-// componente que redireciona de acordo com tipo d usuario
+// componente que redireciona de acordo com tipo de usuario
 interface RedirectBasedOnUserProps {
   tipoUsuario: string | null;
   comumElement: ReactNode;
@@ -86,7 +89,8 @@ function App() {
               comumElement={<Home />}
               jogadoraElement={<HomeJogadora />}
             />
-          }/>
+          }
+        />
 
         <Route
           path="/login"
@@ -114,10 +118,24 @@ function App() {
         <Route path="/produto/:id" element={<Produto />} />
 
 
+        {/* rota notificações acessível para qualquer usuário logado */}
+        <Route 
+          path="/notificacao" 
+          element={
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["comum", "jogadora"]}>
+              <Notificacao
+                setLogado={setLogado}
+                setTipoUsuario={setTipoUsuario}
+              />
+            </PrivateRoute>
+          }
+        />
+
+        {/* perfil jogadora */}
         <Route
           path="/perfil"
           element={
-            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara="jogadora">
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["jogadora"]}>
               <PerfilJogadora
                 setLogado={setLogado}
                 setTipoUsuario={setTipoUsuario}
@@ -125,10 +143,12 @@ function App() {
             </PrivateRoute>
           }
         />
+
+        {/* perfil comum */}
         <Route
           path="/perfil-comum"
           element={
-            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara="comum">
+            <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["comum"]}>
               <PerfilComum
                 setLogado={setLogado}
                 setTipoUsuario={setTipoUsuario}
@@ -136,8 +156,24 @@ function App() {
             </PrivateRoute>
           }
         />
+      {/* Configuração acessível para qualquer usuário logado */}
+      <Route
+        path="/configuracao"
+        element={
+          <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["comum", "jogadora"]}>
+            <Configuracao
+             setLogado={setLogado}
+             setTipoUsuario={setTipoUsuario}
+             tipoUsuario={tipoUsuario}  // 🔥 passando como prop
+            />
+    </PrivateRoute>
+  }
+/>
       </Routes>
 
+        <Footer />
+        {/* Botão fixo do Typebot */}
+        <TypebotButton />
       <Footer />
     </Router>
   );

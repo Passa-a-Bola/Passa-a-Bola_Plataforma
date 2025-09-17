@@ -14,8 +14,6 @@ import Antonia from "../../../assets/Antonia.png";
 import Bruninha from "../../../assets/Bruninha.png";
 import BrunaCalderan from "../../../assets/BrunaCalderan.png";
 
-
-
 interface PerfilProps {
   setLogado: React.Dispatch<React.SetStateAction<boolean>>;
   setTipoUsuario: React.Dispatch<React.SetStateAction<string | null>>;
@@ -40,9 +38,12 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
           <div className="flex flex-col justify-center ml-6">
             <h2 className="branco font-bebas-neue-tit">Nome do Usuário</h2>
             <p className="branco mt-2 font-bebas-neue-sub">usuario@email.com</p>
-            <button className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition">
+            <Link
+              to="/configuracao"
+              className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition text-center inline-block"
+            >
               Editar Perfil
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -103,11 +104,11 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
             <div className="p-4">
               <Link
                 to="/materia"
-                className="hover:text-white transition-colors duration-300 text-2xl"
+                className="hover:text-white transition-colors duration-300 text-2xl font-bebas-neue font-bold"
               >
                 Elogiada por Marta e Formiga: Conheça Dudinha
               </Link>
-              <p className="text-sm text-white">
+              <p className="text-sm text-black">
                 Jogadora do São Paulo marcou dois dos três gols na vitória da
                 Seleção contra as japonesas
               </p>
@@ -124,11 +125,11 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
             <div className="p-4">
               <Link
                 to="/materia"
-                className="hover:text-white transition-colors duration-300 text-2xl"
+                className="hover:text-white transition-colors duration-300 text-2xl font-bebas-neue font-bold"
               >
                 “Parceria de Sucesso”: Dupla Ex-Corinthians fortalece relação
               </Link>
-              <p className="text-sm text-white">
+              <p className="text-sm text-black">
                 Arthur Elias e Cris Gambaré trocam experiências há dez anos e
                 buscam evoluir o futebol feminino
               </p>
@@ -190,6 +191,7 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
           />
         </div>
       </div>
+
     </div>
   );
 }
