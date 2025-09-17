@@ -1,4 +1,3 @@
-
 interface CardProps {
   numero: string;
   posicao: string;
