@@ -164,15 +164,12 @@ function App() {
             <Configuracao
              setLogado={setLogado}
              setTipoUsuario={setTipoUsuario}
-             tipoUsuario={tipoUsuario}  // 🔥 passando como prop
+             tipoUsuario={tipoUsuario} 
             />
     </PrivateRoute>
   }
 />
       </Routes>
-
-        <Footer />
-        {/* Botão fixo do Typebot */}
         <TypebotButton />
       <Footer />
     </Router>
