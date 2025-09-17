@@ -25,6 +25,10 @@ function Header() {
         <img
           src={Notificacao}
           alt="Ícone de notificação"
+          className="w-10 h-10"
+          />
+          </Link>
+        </div>
 
       <div className="absolute top-4 left-4 m-6">
         <Link to="/loja">
