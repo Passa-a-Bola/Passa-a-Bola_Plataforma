@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "r
 // componentes
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import TypebotButton from "./components/typebotbutton/TypebotButton";
 
 // paginas
 import Home from "./pages/comum/home/Home";
@@ -165,6 +166,9 @@ function App() {
 />
       </Routes>
 
+        <Footer />
+        {/* Botão fixo do Typebot */}
+        <TypebotButton />
       <Footer />
     </Router>
   );
