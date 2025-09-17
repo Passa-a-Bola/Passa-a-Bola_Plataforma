@@ -19,6 +19,11 @@ Nosso foco é dar visibilidade, organização e facilidade de acesso às jogador
 - 📢 **Comunicados e avisos em tempo real**: mantém todas informadas sobre mudanças, eventos e oportunidades.  
 -🤖 **Chatbot**: permite o acesso mais prático e rápido à informações como data de jogos, horário e muito mais.
 
+---
+
+## 🖥 Link para utilização do CHATBOT
+
+https://typebot.co/passa-a-bola-s5yu65e
 
 ---
 
