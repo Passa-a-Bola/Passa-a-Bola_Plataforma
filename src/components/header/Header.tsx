@@ -1,8 +1,10 @@
 import Headerbg from "../../assets/header-background.png";
 import Notificacao from "../../assets/Notificacao.png";
+
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Lojinha from "../../assets/loja.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +19,18 @@ function Header() {
         />
       </Link>
 
+
       <div className="absolute top-4 right-4 m-6">
         <Link to="/notificacao">
         <img
           src={Notificacao}
           alt="Ícone de notificação"
+
+      <div className="absolute top-4 left-4 m-6">
+        <Link to="/loja">
+        <img
+          src={Lojinha}
+          alt="Ícone de loja"
           className="w-10 h-10"
           />
           </Link>

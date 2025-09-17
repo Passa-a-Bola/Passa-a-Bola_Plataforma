@@ -27,6 +27,8 @@ import Resumo from "./pages/resumo/Resumo";
 import Aovivo from "./pages/aovivo/Aovivo";
 import Notificacao from "./pages/notificacao/Notificacao";
 import Configuracao from "./pages/configuracao/Configuracao";
+import Loja from "./pages/loja/Loja";
+import Produto from "./pages/produto/Produto";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
@@ -112,6 +114,9 @@ function App() {
         <Route path="/materia" element={<Materia />} />
         <Route path="/resumo" element={<Resumo />} />
         <Route path="/aovivo" element={<Aovivo />} />
+        <Route path="/loja" element={<Loja />} />
+        <Route path="/produto/:id" element={<Produto />} />
+
 
         {/* rota notificações acessível para qualquer usuário logado */}
         <Route 
