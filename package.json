@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@typebot.io/react": "^0.8.24",
     "lucide-react": "^0.544.0",
     "postcss-cli": "^11.0.1",
     "react": "^19.1.1",

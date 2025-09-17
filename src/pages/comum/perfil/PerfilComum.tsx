@@ -38,9 +38,12 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
           <div className="flex flex-col justify-center ml-6">
             <h2 className="branco font-bebas-neue-tit">Nome do Usuário</h2>
             <p className="branco mt-2 font-bebas-neue-sub">usuario@email.com</p>
-            <button className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition">
+            <Link
+              to="/configuracao"
+              className="mt-4 px-6 py-3 rounded-full bg-[var(--cor-9)] branco font-bebas-neue-sub font-bold hover:opacity-90 transition text-center inline-block"
+            >
               Editar Perfil
-            </button>
+            </Link>
           </div>
         </div>
 

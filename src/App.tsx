@@ -25,6 +25,7 @@ import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
 import Aovivo from "./pages/aovivo/Aovivo";
 import Notificacao from "./pages/notificacao/Notificacao";
+import Configuracao from "./pages/configuracao/Configuracao";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
@@ -149,6 +150,19 @@ function App() {
             </PrivateRoute>
           }
         />
+      {/* Configuração acessível para qualquer usuário logado */}
+      <Route
+        path="/configuracao"
+        element={
+          <PrivateRoute tipoUsuario={tipoUsuario} permitidoPara={["comum", "jogadora"]}>
+            <Configuracao
+             setLogado={setLogado}
+             setTipoUsuario={setTipoUsuario}
+             tipoUsuario={tipoUsuario}  // 🔥 passando como prop
+            />
+    </PrivateRoute>
+  }
+/>
       </Routes>
 
       <Footer />
