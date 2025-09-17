@@ -25,7 +25,7 @@ import Materia from "./pages/materia/Materia";
 import Resumo from "./pages/resumo/Resumo";
 import Aovivo from "./pages/aovivo/Aovivo";
 import Loja from "./pages/loja/Loja";
-import Teste from "./pages/calendario/Api";
+import Produto from "./pages/produto/Produto";
 
 // iniciar a pagina sempre no topo
 function ScrollToTop() {
@@ -111,7 +111,8 @@ function App() {
         <Route path="/resumo" element={<Resumo />} />
         <Route path="/aovivo" element={<Aovivo />} />
         <Route path="/loja" element={<Loja />} />
-        <Route path="/produto" element={<Teste />} />
+        <Route path="/produto/:id" element={<Produto />} />
+
 
         <Route
           path="/perfil"

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import camisa1 from "../../assets/Camisa1.png"
 import camisa2 from "../../assets/camisa2.png"
 import chuteira1 from "../../assets/chuteira1.png"
@@ -84,9 +85,11 @@ function Lojinha() {
             <div className="p-4">
               <h3 className="text-lg font-semibold text-gray-800">{produto.nome}</h3>
               <p className="text-xl font-bold">R${produto.preco.toFixed(2)}</p>
-              <button className="mt-4 bg-[var(--cor-5)] text-white py-2 px-6 rounded-lg hover:bg-[var(--cor-)] transition">
-                Comprar
-              </button>
+              <Link to={`/produto/${produto.id}`}>
+                <button className="mt-4 bg-[var(--cor-5)] text-white py-2 px-6 rounded-lg hover:bg-[var(--cor-8)] transition">
+                  Comprar
+                </button>
+              </Link>
             </div>
           </div>
         ))}
