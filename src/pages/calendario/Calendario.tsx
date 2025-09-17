@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import passaabola from "../../assets/passaabola.png";
 import Partida from '../../components/partida/Partida';
 import Partida2tipo from '../../components/partida/Partida2tipo';
