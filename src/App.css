@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+
 .font-inter {
   font-family: "Inter", sans-serif;
 }
@@ -33,26 +34,40 @@
 :root{
   --cor-0: #F9F9F9;
   --cor-1: #E5E5E5;
-  --cor-2: #898989;
+  --cor-2: #D9D9D9;
   --cor-3: #010101;
   --cor-4: #BA2621;
   --cor-5: #ec7696;
   --cor-6: #fcadc2;
-  --cor-8: #66AA23;
-  --cor-7: #8FD772;
+  --cor-7: #C2F6AE;
+  --cor-8: #66B547;
   --cor-9: #9821BA;
+  --cor-10: #b32349;
 }
 
 .branco {
   color: var(--cor-0);
 }
 
+.branco-bg {
+  background-color: var(--cor-0);
+}
+
 .cinza-claro {
   color: var(--cor-1);
 }
 
+.cinza-claro-bg {
+  background-color: var(--cor-1);
+  color: var(--cor-3);
+}
+
 .cinza-escuro {
   color: var(--cor-2);
+}
+
+.preto-bg {
+  background-color: var(--cor-3);
 }
 
 .preto {
@@ -77,11 +92,18 @@
 }
 
 .verde {
-  color: var(--cor-7);
+  color: var(--cor-8);
+}
+
+.verde-bg {
+  background-color: var(--cor-8);
 }
 
 .verde-claro {
-  color: var(--cor-8);
+  color: var(--cor-7);
+}
+.verde-claro-bg {
+  background-color: var(--cor-7);
 }
 
 .roxo {
@@ -100,11 +122,11 @@
   padding: 0
 }
 
+
 /* animação underline em links */
 .underline {
   position: relative;
   display: inline-block;
-  color: #F9F9F9;
   text-decoration: none;
 }
 
@@ -123,4 +145,29 @@
 
 .underline:hover::after {
   transform: scaleX(1);
+}
+
+.botao {
+  color: white;
+  border-radius: 50; 
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.botao:hover {  
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  filter: brightness(1.2);  
+  color: #b32349;
+}
+
+.saltar {
+  transition: all 0.4s ease-in-out;
+}
+
+.saltar:hover {
+  transform: scale(1.05);
 }

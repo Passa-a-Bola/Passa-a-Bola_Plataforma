@@ -1,4 +1,5 @@
 import "./Footer.css"
+import { Link } from "react-router-dom"
 import icon from "../../assets/icon_logo.png"
 
 function Footer(){
@@ -12,9 +13,9 @@ function Footer(){
         <div>
           <h3 className="font-bebas-neue-sub">NOS SIGA EM OUTRAS REDES</h3>
           <ul className="space-y-1">
-            <li><a href="#" className="underline">Instagram</a></li>
-            <li><a href="#" className="underline">YouTube</a></li>
-            <li><a href="#" className="underline">X</a></li>
+            <li><a href="https://www.instagram.com/passaabola/" target="_blank" className="underline">Instagram</a></li>
+            <li><a href="https://www.youtube.com/@passabola" target="_blank" className="underline">YouTube</a></li>
+            <li><a href="https://x.com/passaabola" target="_blank" className="underline">X</a></li>
           </ul>
         </div>
 
@@ -28,8 +29,8 @@ function Footer(){
         </div>
 
         <div>
-          <h3 className="font-bebas-neue-sub">CONTATO</h3>
-          <a href="mailto:passaabola@contato.com" className="underline">passaabola@contato.com</a>
+          <h3 className="font-bebas-neue-sub">Fale com a gente!</h3>
+          <Link to="/contato" className="underline">Contato</Link>
         </div>
 
         <div className="md:flex md:justify-end items-end mt-4 md:mt-0">
