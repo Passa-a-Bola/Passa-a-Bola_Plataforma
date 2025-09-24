@@ -1,6 +1,13 @@
 import IconRed from "../../assets/IconRed.png";
 
-function Notificacao() {
+
+interface NotificacaoProps {
+  setLogado: React.Dispatch<React.SetStateAction<boolean>>;
+  setTipoUsuario: React.Dispatch<React.SetStateAction<string | null>>;
+  // Adicione outras props que o Notificacao usa aqui
+}
+
+function Notificacao({setLogado, setTipoUsuario }: NotificacaoProps) {
   return (
     <div className="mt-12 px-12 mb-12 animate-slide-down">
       <h3 className="text-black text-4xl font-bebas-neue font-bold">

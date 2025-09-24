@@ -4,7 +4,12 @@ import iconFormulario from "../../../assets/formulario.png"
 import evento from "../../../assets/calendario.png"
 import bannerFormulario from "../../../assets/bannerFormulario.png"
 
-function Formulario() {
+interface FormularioProps {
+  setLogado: React.Dispatch<React.SetStateAction<boolean>>;
+  setTipoUsuario: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+function Formulario({ setLogado, setTipoUsuario }: FormularioProps) {
 	return (
 		<section className="flex justify-center font-inter items-start gap-8 px-10 py-5 branco-bg">
 			<div className="flex flex-col gap-6">
