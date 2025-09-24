@@ -1,5 +1,5 @@
 import usuarioTeste from "../../../assets/Leticia.jpg";
-import Partida from "../../../components/partida/Partida";
+/*import Partida from "../../../components/partida/Partida";*/
 import { Link } from "react-router-dom";
 
 interface PerfilProps {

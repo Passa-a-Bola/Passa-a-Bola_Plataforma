@@ -13,8 +13,8 @@ interface ConfiguracaoProps {
 }
 
 const Configuracao: React.FC<ConfiguracaoProps> = ({
-  setLogado,
-  setTipoUsuario,
+  /*setLogado,
+  setTipoUsuario,*/
   tipoUsuario,
 }) => {
   const navigate = useNavigate();

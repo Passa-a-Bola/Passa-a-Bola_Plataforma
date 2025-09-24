@@ -77,7 +77,7 @@ function Formulario() {
 								{ label: "Em treinamento regular", value: "treinamento" },
 								{ label: "Inativa, pretendo voltar", value: "inativa" },
 								{ label: "Em recuperação de lesão", value: "recuperacao" },
-							].map((option, index) => (
+							].map((option/*, index*/) => (
 								<label key={option.value} className="relative flex-1 text-center cursor-pointer">
 									<input
 										type="radio"

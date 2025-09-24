@@ -1,4 +1,9 @@
-function FormularioJP() {
+interface FormularioJPProps {
+  setLogado: React.Dispatch<React.SetStateAction<boolean>>;
+  setTipoUsuario: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+function FormularioJP({ /*setLogado, setTipoUsuario */}: FormularioJPProps) {
     return (
         <section className="flex items-center justify-center py-8">
             <div className="bg-[var(--cor-5)] rounded-2xl p-10 w-full max-w-2xl shadow-lg">
