@@ -113,7 +113,7 @@ function App() {
         <Route path="/contato" element={<Contato />} />
         <Route path="/noticias" element={<Noticias />} />
         <Route path="/sobre" element={<Sobre />} />
-        <Route path="/formulariojp" element={<FormularioJP />} />
+        <Route path="/formulariojp" element={<FormularioJP setLogado={setLogado} setTipoUsuario={setTipoUsuario} />}/>
         <Route path="/materia" element={<Materia />} />
         <Route path="/resumo" element={<Resumo />} />
         <Route path="/aovivo" element={<Aovivo />} />

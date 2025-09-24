@@ -8,7 +8,18 @@ function FormularioJP({setLogado, setTipoUsuario}: FormularioJPProps) {
         <section className="flex items-center justify-center py-8">
             <div className="bg-[var(--cor-5)] rounded-2xl p-10 w-full max-w-2xl shadow-lg">
                 <h1 className="text-center text-3xl text-white font-bebas-neue mb-1"> Seja uma jogadora profissional</h1>
-                <form className="space-y-6">
+                <form
+                className="space-y-6"
+                onSubmit={(e) => {
+                    e.preventDefault(); 
+
+                    setLogado(true); 
+                    setTipoUsuario("jogadora");
+
+                    console.log("Formulário enviado com sucesso!");
+                }}
+                >
+
                     <div>
                         <h3 className="text-lg font-bold text-white">1. Posição principal em campo</h3>
                         <label className="block text-white">

@@ -33,7 +33,7 @@ function Formulario({ setLogado, setTipoUsuario }: FormularioProps) {
 
 			</div>
 			<div className="rosa-bg rounded-2xl w-full max-w-xl shadow-2xl p-6">
-				<form className="space-y-4">
+				<form className="space-y-4"   onSubmit={e => {e.preventDefault(); setLogado(true); setTipoUsuario("jogadora"); console.log("Formulário enviado!");}}>
 					<div className="w-full py-2">
 						<label className="block mb-1 text-base font-medium">1. Posição favorita em campo:</label>
 						<div className="flex flex-wrap justify-center md:justify-start gap-2">

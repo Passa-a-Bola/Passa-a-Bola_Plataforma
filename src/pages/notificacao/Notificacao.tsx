@@ -8,6 +8,9 @@ interface NotificacaoProps {
 }
 
 function Notificacao({setLogado, setTipoUsuario }: NotificacaoProps) {
+
+  void setLogado;
+  void setTipoUsuario;
   return (
     <div className="mt-12 px-12 mb-12 animate-slide-down">
       <h3 className="text-black text-4xl font-bebas-neue font-bold">
