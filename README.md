@@ -76,3 +76,7 @@ A **Plataforma Passa a Bola** representa um passo inovador na criação de ambie
 Combinamos **design moderno, desenvolvimento ágil e foco na experiência da usuária**, garantindo uma solução prática e escalável.  
 
 ---
+
+## Acesse a nossa plataforma
+
+https://passa-a-bola-plataforma.vercel.app/
