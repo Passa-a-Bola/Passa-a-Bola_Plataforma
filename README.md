@@ -62,11 +62,11 @@ https://typebot.co/passa-a-bola-s5yu65e
 
 O projeto foi desenvolvido pelos estudantes da **FIAP**:  
 
-- Dennis Nieto Generoso – RM563671  
-- Giovanna da Silva Santos – RM566301  
-- Giovanna Luiza Bento – RM563203  
-- Isabella Jardim Marques – RM566470  
-- Mayene Moura da Silva – RM564624  
+- Dennis Nieto Generoso
+- Giovanna da Silva Santos
+- Giovanna Luiza Bento
+- Isabella Jardim Marques
+- Mayene Moura da Silva 
 
 ---
 
