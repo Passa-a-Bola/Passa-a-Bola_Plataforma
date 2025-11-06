@@ -31,7 +31,7 @@ function HomeJogadora() {
             alt="ícone bola de futebol"
             className="md:w-1/2 object-cover max-w-12"
           />
-          <p className="font-bebas-neue-tit md:text-left ">e torne uma jogadora profissional</p>
+          <p className="font-bebas-neue-tit md:text-left ">Se torne uma jogadora profissional</p>
           <p className="font-inter max-w-9124 text-wrap">Dê os primeiros passos da sua carreira com a gente! Aqui no Passa a Bola, você tem acesso a peneiras, partidas, dicas de como crescer e apoio da nossa equipe</p>
           <div>
             <Link to="/formulario" className="botao rosa-bg py-1 px-4 rounded-full font-inter font-bold my-3 shadow-lg">

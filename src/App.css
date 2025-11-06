@@ -128,7 +128,7 @@
 .underline {
   position: relative;
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .underline::after {
