@@ -175,3 +175,7 @@
 .saltar:hover {
   transform: scale(1.05);
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function PartidaAoVivo() {
   return (
-    <div className=" w-80 h-52 rounded-2xl border cinza-claro-bg">
+    <div className="font-inter w-80 h-52 rounded-2xl border cinza-claro-bg">
       <div className="relative font-bebas-neue">
         <span className="absolute top-2 bg-red-600 text-white text-xl px-7 py-0.7 transform -rotate-12">
           AO VIVO!

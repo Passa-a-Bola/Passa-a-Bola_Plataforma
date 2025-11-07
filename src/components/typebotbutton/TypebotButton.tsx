@@ -93,6 +93,7 @@ const TypebotButton = () => {
             }}
           >
             <div
+              className="rolling-ball" 
               style={{
                 fontSize: "60px",
                 display: "inline-block",
@@ -165,16 +166,23 @@ const TypebotButton = () => {
             )}
 
             <style>{`
-              @keyframes rollLeft {
-                0% {
-                  transform: translateX(0) rotate(0deg);
-                  opacity: 1;
-                }
-                100% {
-                  transform: translateX(-120vw) rotate(-1800deg);
-                  opacity: 1;
-                }
-              }
+       @keyframes rollLeft {
+    0% {
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-120vw) rotate(-1800deg);
+      opacity: 1;
+    }
+  }
+
+  /* 📱 mobile: bola rola mais rápido */
+  @media (max-width: 768px) {
+    .rolling-ball {
+      animation: rollLeft 1.3s ease-in-out forwards !important; /* antes 2s → agora 1.3s */
+    }
+  }
             `}</style>
           </div>
         )}

@@ -30,7 +30,7 @@ https://typebot.co/passa-a-bola-s5yu65e
 - **Ferramentas de prototipagem** → apoio no design e usabilidade das páginas.  
 
 ---
-
+<!-- 
 ## 📌 Descrição dos pontos de acesso à API
 
 ###  Endpoint: Ligas de Futebol
@@ -55,7 +55,7 @@ https://typebot.co/passa-a-bola-s5yu65e
     .then(res => res.json())
     .then(data => console.log(data.response));
   ```
-* **Parâmetros opcionais:** Nenhum obrigatório para o seu uso atual, mas a API permite filtrar por `id`, `country` ou `season`.
+* **Parâmetros opcionais:** Nenhum obrigatório para o seu uso atual, mas a API permite filtrar por `id`, `country` ou `season`. -->
 
 ---
 ## 👥 Nossa Equipe  
