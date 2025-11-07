@@ -1,12 +1,12 @@
-import juventude from "../../assets/juventude.png"
-import gremio from "../../assets/gremio.png"
+import juventude from "../../assets/juventude.png";
+import gremio from "../../assets/gremio.png";
 import { Link } from "react-router-dom";
 
-function Partida(){
+function Partida() {
   return (
-  <div className="w-80 font-inter rounded-2xl border cinza-claro-bg overflow-hidden">
-      <div className="flex justify-between items-center">
-        <span className="italic pl-6">Semifinal <span>17:00</span></span>
+    <div className="w-full sm:w-80 md:w-72 lg:w-80 font-inter rounded-2xl border cinza-claro-bg overflow-hidden">
+      <div className="flex justify-between items-center px-4 py-2">
+        <span className="italic">Semifinal <span>17:00</span></span>
         <span className="px-5 rounded-full font-bebas-neue-sub rosa-bg">CONCLUIDO</span>
       </div>
 
@@ -27,11 +27,12 @@ function Partida(){
           <span className="font-bebas-neue-tit">0</span>
         </div>
       </div>
+
       <div className="border-t px-4 py-2 text-center">
-        <Link to="/resumo" className="underline font-bebas-neue-sub preto">SAIBA O QUE ROLOU →</Link>
+        <Link to="/resumo" className="underline font-bebas-neue-sub preto">→ SAIBA O QUE ROLOU</Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default Partida
+export default Partida;

@@ -9,8 +9,7 @@ import bola        from "../../../assets/bola.png";
 
 function Home() {
   return (
-    <>
-    <div className="mx-10 my-5">
+    <div className="mx-4 md:mx-10 my-4 md:my-5 justify-center flex flex-col">
       <Link to="/calendario" className="flex items-stretch flex-col md:flex-row items-center my-6"
            style={{boxShadow: " rgba(0, 0, 0, 0.45) 0px 25px 20px -20px"}}>
         <img src={paulistao} alt="Jogadoras do Corinthians comemorando no Paulistão Feminino" className="md:w-1/2 object-cover max-h-60"/>
@@ -22,7 +21,7 @@ function Home() {
         </div>
       </Link>
       <p className="font-inter">Acompanhe as próximas partidas do futebol feminino!</p>
-      <div className='flex flex-wrap mt-2 justify-between'>
+      <div className='flex flex-wrap justify-center gap-4 mt-2'>
         <Partida/>
         <Partida/>
         <Partida/>
@@ -84,9 +83,7 @@ function Home() {
         </div>
       </div>
   </section>
-  
     </div>
-    </>
   );
 }
 
