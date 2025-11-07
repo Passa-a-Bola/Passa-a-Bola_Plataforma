@@ -22,9 +22,9 @@ function Footer(){
         <div>
           <h3 className="font-bebas-neue-sub">PÁGINAS</h3>
           <ul className="space-y-1">
-            <li><a href="#" className="underline">Calendário de jogos</a></li>
-            <li><a href="#" className="underline">Sobre nós</a></li>
-            <li><a href="#" className="underline">Notícias</a></li>
+            <Link to="/calendario" className="underline">Calendário de jogos</Link><br />
+            <Link to="/sobre" className="underline">Sobre nós</Link><br />
+            <Link to="/noticias" className="underline">Notícias</Link>
           </ul>
         </div>
 
