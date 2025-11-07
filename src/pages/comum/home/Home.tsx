@@ -4,12 +4,14 @@ import Partida     from '../../../components/partida/Partida';
 import trofeu      from '../../../assets/taca.png'
 import copaamerica from "../../../assets/copaamerica.png";
 import flamengo    from "../../../assets/flamengo.png";
+import amadora     from "../../../assets/amadora.jpeg";
+import bola        from "../../../assets/bola.png";
 
 function Home() {
   return (
     <>
     <div className="mx-10 my-5">
-      <div className="flex items-stretch flex-col md:flex-row items-center my-6"
+      <Link to="/calendario" className="flex items-stretch flex-col md:flex-row items-center my-6"
            style={{boxShadow: " rgba(0, 0, 0, 0.45) 0px 25px 20px -20px"}}>
         <img src={paulistao} alt="Jogadoras do Corinthians comemorando no Paulistão Feminino" className="md:w-1/2 object-cover max-h-60"/>
 
@@ -18,15 +20,37 @@ function Home() {
           <p className="font-bebas-neue-tit md:text-left ">ACOMPANHE O PAULISTÃO FEMININO AQUI!</p>
           <p className="font-inter">Saiba todas as atualizações, futuras partidas e times classificados do campeonato </p>
         </div>
-      </div>
+      </Link>
       <p className="font-inter">Acompanhe as próximas partidas do futebol feminino!</p>
       <div className='flex flex-wrap mt-2 justify-between'>
         <Partida/>
         <Partida/>
         <Partida/>
       </div>
-    </div>
-    <section className="mt-8 ml-8 font-inter">
+
+        <div className="flex items-stretch flex-col md:flex-row items-center mt-6"
+           style={{ boxShadow: " rgba(0, 0, 0, 0.45) 0px 25px 20px -20px" }}>
+        <img
+          src={amadora}
+          alt="Jogadoras da seleção feminina do Brasil comemorando"
+          className="md:w-1/2 object-cover max-h-64"
+        />
+        <div className="w-full flex flex-col magenta-bg justify-center p-4 space-y-1">
+          <img
+            src={bola}
+            alt="ícone bola de futebol"
+            className="md:w-1/2 object-cover max-w-12"
+          />
+          <p className="font-bebas-neue-tit md:text-left ">Se torne uma jogadora profissional</p>
+          <p className="font-inter max-w-9124 text-wrap">Dê os primeiros passos da sua carreira com a gente! Aqui no Passa a Bola, você tem acesso a peneiras, partidas, dicas de como crescer e apoio da nossa equipe</p>
+          <div>
+            <Link to="/cadastro" className="botao py-1 px-4 rounded-full font-inter font-bold my-3 shadow-lg">
+              Cadastre sua conta de jogadora →
+            </Link>
+          </div>
+        </div>
+      </div>
+    <section className="my-10 font-inter">
       <h2 className="text-xl md:text-2xl font-bold mb-4">Principais Notícias</h2>
 
       <div className="space-y-6">
@@ -60,6 +84,8 @@ function Home() {
         </div>
       </div>
   </section>
+  
+    </div>
     </>
   );
 }

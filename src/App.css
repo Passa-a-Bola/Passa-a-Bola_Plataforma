@@ -1,14 +1,12 @@
 /* Variáveis de fontes */
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 .font-inter {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
 }
 
 .font-inter-text {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 12px;
 }
 
@@ -114,6 +112,11 @@
 .roxo-bg {
   background-color: var(--cor-9);
   color: var(--cor-0);
+}
+
+.magenta-bg {
+  background-color: #A099DB;
+  color: var(--cor-3);
 }
 
 /* Configurações gerais */
