@@ -52,21 +52,22 @@ function Header() {
 
           {/* Hamburger Mobile */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? "X" : "☰"}
+            <button onClick={() => setIsOpen(!isOpen)} className="text-2xl transition-transform duration-300">
+              {isOpen ? "✖" : "☰"}
             </button>
           </div>
         </div>
 
         {/* Menu Mobile */}
-        {isOpen && (
-          <div className="rosa-bg font-bebas-neue items-center md:hidden flex flex-col space-y-2">
-            <Link to="/calendario" className="underline">Calendário</Link>
-            <Link to="/noticias" className="underline">Notícias</Link>
-            <Link to="/sobre" className="underline">Sobre nós</Link>
-            <Link to="/perfil" className="underline">Perfil</Link>
-          </div>
-        )}
+        <div className={`rosa-bg font-bebas-neue md:hidden flex flex-col items-center space-y-2 overflow-hidden transition-all duration-500 ease-in-out transform ${
+          isOpen ? "max-h-40 translate-y-0 py-2" : "max-h-0 -translate-y-4 py-0"
+        }`}
+        >
+          <Link to="/calendario" className="underline">Calendário</Link>
+          <Link to="/noticias" className="underline">Notícias</Link>
+          <Link to="/sobre" className="underline">Sobre nós</Link>
+          <Link to="/perfil" className="underline">Perfil</Link>
+        </div>
       </nav>
     </div>
   );
