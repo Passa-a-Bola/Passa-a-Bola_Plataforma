@@ -169,7 +169,7 @@ function Calendario() {
               isMobile ? "w-full" : "w-[600px]"
             } scrollbar-hide`}
           >
-            {days.map((day) => (
+            {visibleDays.map((day) => (
               <button
                 key={day}
                 onClick={() => setSelectedDay(day)}
