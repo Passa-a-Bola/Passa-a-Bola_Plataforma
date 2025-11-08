@@ -1,5 +1,4 @@
 import usuarioTeste from '../../../assets/usuarioTeste.png';
-import Partida from "../../components/partida/Partida"
 
 function Perfil() {
   return (
@@ -90,9 +89,6 @@ function Perfil() {
       </div>
 
       <div className="mt-4 px-12 flex flex-col md:flex-row justify-between gap-6">
-        <Partida/>
-        <Partida/>
-        <Partida/>
       </div>
     </div>
   );
