@@ -16,7 +16,7 @@ function Materia() {
 
   return (
     <>
-      <main className="bg-white text-black">
+      <main className="bg-white text-black font-inter">
         <section className="max-w-4xl mx-auto px-4 py-12">
             <button
                 onClick={handleBack}

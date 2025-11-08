@@ -10,85 +10,124 @@ function Noticias() {
     <main className="min-h-screen px-4 md:px-12 lg:px-24 py-8 font-inter">
       <h1 className="text-5xl font-bebas-neue mb-6">NOTÍCIAS</h1>
 
+      {/* campo de pesquisa */}
       <div className="flex justify-end mb-8">
         <input
           type="text"
           placeholder="Pesquisa..."
-          className="px-4 py-2 rounded-full font-bebas-neue placeholder-white  border-white w-64 focus:outline-none bg-[var(--cor-9)] text-white"
+          className="px-4 py-2 rounded-full font-bebas-neue placeholder-white border-white w-64 focus:outline-none bg-[var(--cor-9)] text-white"
         />
       </div>
 
-      <div className=" grid md:grid-cols-2 gap-6">
-        <div className=" flex items-center gap-4 bg-gray-300 shadow-md overflow-hidden">
-          <img src={copaamerica} alt="Notícia" className="w-full h-40 object-cover ml-2" />
-          <div className="p-4">
-            <Link to="/materia" className=" font-bebas-neue text-2xl">Antonia Silva comemora convocação para a Copa América</Link>
-            <p className="text-xs">Medalhista olímpica é convocada por Arthur Elias. Defensora do Real Madrid recebe título de Cidadã Natalense </p>
+      {/* blocos principais */}
+      <div className="grid md:grid-cols-2 gap-6">
+        {[ 
+          {
+            img: copaamerica,
+            title: "Antonia Silva comemora convocação para a Copa América",
+            text: "Medalhista olímpica é convocada por Arthur Elias. Defensora do Real Madrid recebe título de Cidadã Natalense.",
+          },
+          {
+            img: flamengo,
+            title: "Flamengo vive bom momento no Brasileirão Feminino",
+            text: "Rubro-Negro está em sexto no campeonato e busca melhorar posição.",
+          },
+          {
+            img: dudinha,
+            title: "Elogiada por Marta e Formiga: Conheça Dudinha",
+            text: "Jogadora do São Paulo marcou dois dos três gols na vitória da Seleção contra as japonesas.",
+          },
+          {
+            img: parceria,
+            title: "“Parceria de Sucesso”: Dupla Ex-Corinthians fortalece relação",
+            text: "Arthur Elias e Cris Gambaré trocam experiências há dez anos e buscam evoluir o futebol feminino.",
+          },
+        ].map((n, i) => (
+          <div
+            key={i}
+            className="flex flex-col sm:flex-row items-center gap-4 bg-gray-300 shadow-md overflow-hidden rounded-lg"
+          >
+            <div className="flex-shrink-0 w-full sm:w-1/2 h-48 flex justify-center items-center bg-white">
+              <img
+                src={n.img}
+                alt="Notícia"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-4 text-center sm:text-left">
+              <Link
+                to="/materia"
+                className="font-bebas-neue text-2xl block hover:underline"
+              >
+                {n.title}
+              </Link>
+              <p className="text-xs">{n.text}</p>
+            </div>
           </div>
-        </div>
-
-        <div className=" flex items-center gap-4 bg-gray-300 shadow-md overflow-hidden">
-          <img src={flamengo} alt="Notícia" className="w-full h-40 object-cover ml-2" />
-          <div className="p-4">
-            <Link to="/materia" className="font-bebas-neue text-2xl">Flamengo vive bom momento no Brasileirão Feminino</Link>
-            <p className="text-xs">Rubro-Negro está em sexto no campeonato e busca melhorar posição</p>
-          </div>
-        </div>
-
-        <div className=" flex items-center gap-4 bg-gray-300 shadow-md overflow-hidden">
-          <img src={dudinha} alt="Notícia" className="w-full h-40 object-cover ml-2" />
-          <div className="p-4">
-            <Link to="/materia" className=" font-bebas-neue text-2xl">Elogiada por Marta e Formiga: Conheça Dudinha</Link>
-            <p className="text-xs">Jogadora do São Paulo marcou dois dos três gols na vitória da Seleção contra as japonesas</p>
-          </div>
-        </div>
-
-        <div className=" flex items-center gap-4 bg-gray-300 shadow-md overflow-hidden">
-          <img src={parceria} alt="Notícia" className="w-full h-40 object-cover ml-2" />
-          <div className="p-4">
-            <Link to="/materia" className=" font-bebas-neue text-2xl">“Parceria de Sucesso”: Dupla Ex- Corinthians fortalece relação</Link>
-            <h2 className="font-semibold"></h2>
-            <p className="text-xs">Arthur Elias e Cris Gambaré trocam experiências há dez anos e buscam evoluir o futebol feminino</p>
-          </div>
-        </div>
+        ))}
       </div>
 
-      <div className="mt-10 bg-gray-300 shadow-md overflow-hidden">
-        <img src={iape} alt="Banner" className="w-[97%] h-60 object-cover ml-5 mr-5 mt-5" />
-        <div className="p-6">
-          <Link to="/materia" className=" font-bebas-neue text-2xl">IAPE é eliminado pelo Doce Mel na Copa do Brasil Feminina</Link>
+      {/* banner */}
+      <div className="mt-10 bg-gray-300 shadow-md overflow-hidden rounded-lg">
+        <img
+          src={iape}
+          alt="Banner"
+          className="w-full h-60 object-cover"
+        />
+        <div className="p-4">
+          <Link
+            to="/materia"
+            className="font-bebas-neue text-2xl block hover:underline"
+          >
+            IAPE é eliminado pelo Doce Mel na Copa do Brasil Feminina
+          </Link>
           <p className="text-xs">
             Time maranhense abre placar com Sirlane no primeiro tempo, mas sofre virada do time adversário com goleada.
           </p>
         </div>
       </div>
 
+      {/* seção "podem te interessar" */}
       <h2 className="mt-12 mb-6 text-2xl font-bold">Podem te interessar</h2>
 
       <div className="grid md:grid-cols-3 gap-6">
-        <div className="bg-gray-300 shadow-md overflow-hidden">
-          <img src={copaamerica} alt="Notícia" className="w-full h-32 object-cover" />
-          <div className="p-4">
-            <Link to="/materia" className=" font-bebas-neue text-2xl">Antonia Silva comemora convocação para a Copa América</Link>
-            <p className="text-xs">Medalhista olímpica é convocada por Arthur Elias. Defensora do Real Madrid recebe título de Cidadã Natalense </p>
+        {[ 
+          {
+            img: copaamerica,
+            title: "Antonia Silva comemora convocação para a Copa América",
+            text: "Medalhista olímpica é convocada por Arthur Elias.",
+          },
+          {
+            img: flamengo,
+            title: "Flamengo vive bom momento no Brasileirão Feminino",
+            text: "Rubro-Negro busca melhorar posição no campeonato.",
+          },
+          {
+            img: parceria,
+            title: "“Parceria de Sucesso”: Dupla Ex-Corinthians fortalece relação",
+            text: "Arthur Elias e Cris Gambaré evoluem o futebol feminino.",
+          },
+        ].map((n, i) => (
+          <div
+            key={i}
+            className="bg-gray-300 shadow-md overflow-hidden rounded-lg"
+          >
+            <img
+              src={n.img}
+              alt="Notícia"
+              className="w-full h-40 object-cover"
+            />
+            <div className="p-4">
+              <Link
+                to="/materia"
+                className="font-bebas-neue text-2xl block hover:underline"
+              >
+                {n.title}
+              </Link>
+              <p className="text-xs">{n.text}</p>
+            </div>
           </div>
-        </div>
-
-        <div className="bg-gray-300 shadow-md overflow-hidden">
-          <img src={flamengo} alt="Notícia" className="w-full h-32 object-cover" />
-          <div className="p-4">
-            <Link to="/materia" className=" font-bebas-neue text-2xl">Flamengo vive bom momento no Brasileirão Feminino</Link>
-            <p className="text-xs">Rubro-Negro está em sexto no campeonato e busca melhorar posição</p>
-          </div>
-        </div>
-
-        <div className="bg-gray-300 shadow-md overflow-hidden">
-          <img src={parceria} alt="Notícia" className="w-full h-32 object-cover" />
-          <div className="p-4">
-            <Link to="/materia" className=" font-bebas-neue text-2xl">“Parceria de Sucesso”: Dupla Ex- Corinthians fortalece relação</Link>
-            <p className="text-xs">Arthur Elias e Cris Gambaré trocam experiências há dez anos e buscam evoluir o futebol feminino</p>
-          </div>
-        </div>
+        ))}
       </div>
     </main>
   );
