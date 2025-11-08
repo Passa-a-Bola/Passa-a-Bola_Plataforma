@@ -10,7 +10,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="header relative">
+    <div className="header mb-6 relative h-16 sm:h-28 md:h-full">
       <Link to="/">
         <img
           src={Headerbg}
@@ -20,22 +20,22 @@ function Header() {
       </Link>
 
 
-      <div className="absolute top-4 right-4 m-6">
+      <div className="absolute right-3 top-3 sm:right-4 sm:top-4 md:right-6 md:top-6">
         <Link to="/notificacao">
         <img
           src={Notificacao}
           alt="Ícone de notificação"
-          className="w-10 h-10"
+          className="w-10 h-10 sm:w-9 sm:h-9 md:w-10 md:h-10"
           />
           </Link>
         </div>
 
-      <div className="absolute top-4 left-4 m-6">
+      <div className="absolute left-3 top-3 sm:left-4 sm:top-4 md:left-6 md:top-6">
         <Link to="/loja">
         <img
           src={Lojinha}
           alt="Ícone de loja"
-          className="w-10 h-10"
+          className="w-10 h-10 sm:w-9 sm:h-9 md:w-10 md:h-10"
           />
           </Link>
       </div>
