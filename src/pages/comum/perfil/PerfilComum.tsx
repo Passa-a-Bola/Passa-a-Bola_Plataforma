@@ -37,10 +37,10 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
             className="w-32 h-32 rounded-full mb-4 sm:mb-0 sm:mr-8"
           />
           <div className="flex flex-col justify-center sm:ml-6">
-            <h2 className="branco font-bebas-neue-tit text-2xl sm:text-3xl">
+            <h2 className="preto font-bebas-neue-tit text-2xl sm:text-3xl">
               Nome do Usuário
             </h2>
-            <p className="branco mt-2 font-bebas-neue-sub text-base sm:text-lg">
+            <p className="preto mt-2 font-bebas-neue-sub text-base sm:text-lg">
               usuario@email.com
             </p>
             <Link
@@ -66,7 +66,7 @@ function PerfilComum({ setLogado, setTipoUsuario }: PerfilProps) {
           <h3 className="text-white text-2xl font-bebas-neue font-bold">
             Sobre mim
           </h3>
-          <p className="text-white text-base mt-2 font-normal">
+          <p className="text-white text-base mt-2 font-inter">
             Esse usuário não adicionou ainda
           </p>
         </div>

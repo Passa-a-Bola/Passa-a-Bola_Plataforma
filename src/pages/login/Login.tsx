@@ -25,8 +25,8 @@ function Login({ setLogado, setTipoUsuario, logado, tipoUsuario }: LoginProps) {
   };
 
   return (
-    <section className="flex items-center justify-center py-8">
-      <div className="bg-[var(--cor-5)] rounded-2xl p-10 w-full max-w-md shadow-lg">
+    <section className="flex items-center justify-center mx-4 md:mx-10 my-4 md:my-5 ">
+      <div className="bg-[var(--cor-5)] rounded-2xl p-10 w-full max-w-md shadow-lg mt-8 md:mt-2">
         <h1 className="text-center text-3xl text-white font-bebas-neue mb-6">
           Faça seu login
         </h1>
@@ -79,14 +79,14 @@ function Login({ setLogado, setTipoUsuario, logado, tipoUsuario }: LoginProps) {
             <button
               type="button"
               onClick={() => handleLogin("comum")}
-              className="flex-1 text-xl bg-[var(--cor-9)] text-white font-bebas-neue font-bold uppercase rounded-full py-2 hover:bg-purple-700 transition"
+              className="flex-1 text-xl bg-[var(--cor-9)] text-white font-bebas-neue uppercase rounded-full py-2 hover:bg-purple-700 transition"
             >
               Login Comum
             </button>
             <button
               type="button"
               onClick={() => handleLogin("jogadora")}
-              className="flex-1 text-xl bg-[var(--cor-9)] text-white font-bebas-neue font-bold uppercase rounded-full py-2 hover:bg-purple-700 transition"
+              className="flex-1 text-xl bg-[var(--cor-9)] text-white font-bebas-neue uppercase rounded-full py-2 hover:bg-purple-700 transition"
             >
               Login Jogadora
             </button>
