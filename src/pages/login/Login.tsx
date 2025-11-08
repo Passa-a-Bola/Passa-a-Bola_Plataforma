@@ -65,7 +65,7 @@ function Login({ setLogado, setTipoUsuario, logado, tipoUsuario }: LoginProps) {
             />
           </div>
 
-          <p className="text-sm text-white">
+          {/* <p className="text-sm text-white">
             Não tem conta?{" "}
             <a
               href="/cadastroinicio"
@@ -73,7 +73,7 @@ function Login({ setLogado, setTipoUsuario, logado, tipoUsuario }: LoginProps) {
             >
               Se cadastre aqui
             </a>
-          </p>
+          </p> */}
 
           <div className="flex gap-4">
             <button

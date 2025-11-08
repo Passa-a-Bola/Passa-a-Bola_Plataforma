@@ -21,11 +21,11 @@ function Partida({ campeonato, horario, status, timeA, timeB }: PartidaProps) {
         <span className="italic pl-6">{campeonato} <span>{horario}</span></span>
         <span className={`px-5 rounded-full font-bebas-neue-sub text-white
     ${
-      status === "CONCLUÍDO"
-        ? "bg-pink-600"
-        : status === "EM ANDAMENTO"
-        ? "bg-yellow-500"
-        : "bg-gray-500"
+      status === "ENCERRADO"
+        ? "bg-gray-500"
+        : status === "AGORA"
+        ? "verde-bg"
+        : "rosa-bg"
     }`}>{status}</span>
       </div>
 

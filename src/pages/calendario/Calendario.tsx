@@ -96,8 +96,7 @@ function Calendario() {
 
   return (
     <>
-      {/* Banner topo */}
-      <div className="mx-10 my-5">
+      <div className="font-inter mx-4 md:mx-10 my-4 md:my-5 justify-center flex flex-col">
         <div
           className="flex items-stretch flex-col md:flex-row items-center my-6"
           style={{ boxShadow: "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px" }}
@@ -120,10 +119,9 @@ function Calendario() {
             className="md:w-1/2 object-cover max-h-60"
           />
         </div>
-      </div>
 
       {/* Cabeçalho e dias */}
-      <div className="px-6 mb-10 font-inter">
+      <div className="">
         <h1 className="text-3xl font-bebas-neue-tit mb-2">CALENDÁRIO</h1>
         <p className="text-gray-600 mb-6">
           Saiba as datas e horários dos jogos aqui
@@ -193,7 +191,7 @@ function Calendario() {
       </div>
 
       {/* Renderiza partidas mocadas do dia */}
-      <div className="flex flex-wrap justify-center gap-6 px-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {partidasDoDia.length > 0 ? (
           partidasDoDia.map((partida) => (
             <Partida
@@ -214,13 +212,14 @@ function Calendario() {
 
       <hr className="my-10" />
 
-      <h2 className="text-lg font-bebas-neue-tit m-6">
+      <h2 className="text-lg font-bebas-neue-tit">
         Jogos que você não pode perder
       </h2>
-      <div className="flex flex-wrap justify-center gap-6 m-9">
+      <div className="flex flex-wrap justify-center gap-6">
         <Partida2tipo />
         <Partida2tipo />
         <Partida2tipo />
+      </div>
       </div>
     </>
   );

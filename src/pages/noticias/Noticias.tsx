@@ -10,15 +10,6 @@ function Noticias() {
     <main className="min-h-screen px-4 md:px-12 lg:px-24 py-8 font-inter">
       <h1 className="text-5xl font-bebas-neue mb-6">NOTÍCIAS</h1>
 
-      {/* campo de pesquisa */}
-      <div className="flex justify-end mb-8">
-        <input
-          type="text"
-          placeholder="Pesquisa..."
-          className="px-4 py-2 rounded-full font-bebas-neue placeholder-white border-white w-64 focus:outline-none bg-[var(--cor-9)] text-white"
-        />
-      </div>
-
       {/* blocos principais */}
       <div className="grid md:grid-cols-2 gap-6">
         {[ 
