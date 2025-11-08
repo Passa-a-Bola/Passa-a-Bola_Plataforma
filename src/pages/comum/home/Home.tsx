@@ -6,6 +6,8 @@ import copaamerica from "../../../assets/copaamerica.png";
 import flamengo    from "../../../assets/flamengo.png";
 import amadora     from "../../../assets/amadora.jpeg";
 import bola        from "../../../assets/bola.png";
+import { partidasMockadas } from "../../../components/partida/mockPartida"
+
 
 function Home() {
   return (
@@ -15,18 +17,24 @@ function Home() {
         <img src={paulistao} alt="Jogadoras do Corinthians comemorando no Paulistão Feminino" className="md:w-1/2 object-cover max-h-60"/>
 
         <div className="w-full flex flex-col roxo-bg justify-center p-4 space-y-1">
-            <img src={trofeu} alt="ícone de taça troféu" className="max-w-12"/>
+            <img src={trofeu} alt="ícone de taça troféu" className="hidden sm:block max-w-12"/>
           <p className="font-bebas-neue-tit md:text-left ">ACOMPANHE O PAULISTÃO FEMININO AQUI!</p>
           <p className="font-inter">Saiba todas as atualizações, futuras partidas e times classificados do campeonato </p>
         </div>
       </Link>
       <p className="font-inter">Acompanhe as próximas partidas do futebol feminino!</p>
-      <div className='flex flex-wrap justify-center gap-4 mt-2'>
-        <Partida/>
-        <Partida/>
-        <Partida/>
+        <div className="flex flex-wrap justify-center gap-4 mt-2">
+        {partidasMockadas.slice(10, 13).map((p) => (
+          <Partida
+            key={p.id}
+            campeonato={p.campeonato}
+            horario={p.horario}
+            status={p.status}
+            timeA={p.timeA}
+            timeB={p.timeB}
+          />
+        ))}
       </div>
-
         <div className="flex items-stretch flex-col md:flex-row items-center mt-6"
            style={{ boxShadow: " rgba(0, 0, 0, 0.45) 0px 25px 20px -20px" }}>
         <img

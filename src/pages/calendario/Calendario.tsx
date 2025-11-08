@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import passaabola from "../../assets/passaabola.png";
 import Partida from "../../components/partida/Partida";
 import Partida2tipo from "../../components/partida/Partida2tipo";
+import { partidasMockadas } from "../../components/partida/mockPartida"
 
 function Calendario() {
   const days = Array.from({ length: 31 }, (_, i) => (1 + i).toString());
@@ -11,9 +12,8 @@ function Calendario() {
   const [selectedDay, setSelectedDay] = useState<string>("1");
   const [currentMonth, setCurrentMonth] = useState<string>("");
   const [currentYear, setCurrentYear] = useState<number>(2025);
-
-  const scrollRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const getMonthName = (monthIndex: number) => {
     const months = [
@@ -23,6 +23,7 @@ function Calendario() {
     return months[monthIndex];
   };
 
+  // Data atual
   useEffect(() => {
     const today = new Date();
     const todayDay = today.getDate().toString();
@@ -34,6 +35,7 @@ function Calendario() {
     setCurrentYear(year);
   }, []);
 
+  // Responsividade
   useEffect(() => {
     const updateVisible = () => {
       const w = window.innerWidth;
@@ -46,9 +48,9 @@ function Calendario() {
     return () => window.removeEventListener("resize", updateVisible);
   }, []);
 
+  // Navegação entre dias
   useEffect(() => {
     if (!selectedDay || !visibleCount) return;
-
     const todayIndex = parseInt(selectedDay) - 1;
     const middleOffset = Math.floor(visibleCount / 2);
 
@@ -67,17 +69,9 @@ function Calendario() {
   const canPrev = startIndex > 0;
   const canNext = startIndex + visibleCount < days.length;
 
-  const handlePrev = () => {
-    if (!canPrev) return;
-    setStartIndex((s) => Math.max(0, s - 1));
-    scrollToIndex(startIndex - 1);
-  };
-
-  const handleNext = () => {
-    if (!canNext) return;
-    setStartIndex((s) => Math.min(days.length - visibleCount, s + 1));
-    scrollToIndex(startIndex + 1);
-  };
+  const handlePrev = () => canPrev && setStartIndex((s) => Math.max(0, s - 1));
+  const handleNext = () =>
+    canNext && setStartIndex((s) => Math.min(days.length - visibleCount, s + 1));
 
   const scrollToIndex = (index: number) => {
     if (scrollRef.current) {
@@ -95,8 +89,14 @@ function Calendario() {
 
   const formattedDate = `${selectedDay.padStart(2, "0")} de ${currentMonth}`;
 
+  // Filtra partidas pelo dia selecionado
+  const partidasDoDia = partidasMockadas.filter(
+    (p) => p.dia === parseInt(selectedDay)
+  );
+
   return (
     <>
+      {/* Banner topo */}
       <div className="mx-10 my-5">
         <div
           className="flex items-stretch flex-col md:flex-row items-center my-6"
@@ -109,10 +109,9 @@ function Calendario() {
             >
               JOGUE COM A GENTE!
             </h2>
-
             <p className="font-bebas-neue-tit text-white">
-              está interessada em jogar em campeonatos e peneiras? Faça seu
-              cadastro como jogadora
+              Está interessada em jogar em campeonatos e peneiras? Faça seu
+              cadastro como jogadora.
             </p>
           </div>
           <img
@@ -123,6 +122,7 @@ function Calendario() {
         </div>
       </div>
 
+      {/* Cabeçalho e dias */}
       <div className="px-6 mb-10 font-inter">
         <h1 className="text-3xl font-bebas-neue-tit mb-2">CALENDÁRIO</h1>
         <p className="text-gray-600 mb-6">
@@ -135,7 +135,7 @@ function Calendario() {
           </span>
         </h1>
 
-        {/* Slider/carrossel de dias */}
+        {/* Slider de dias */}
         <div className="flex items-center justify-center gap-2">
           {!isMobile && (
             <button
@@ -146,20 +146,7 @@ function Calendario() {
                 canPrev ? "hover:bg-gray-100" : "opacity-40 cursor-not-allowed"
               }`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
+              ◀
             </button>
           )}
 
@@ -194,20 +181,7 @@ function Calendario() {
                 canNext ? "hover:bg-gray-100" : "opacity-40 cursor-not-allowed"
               }`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              ▶
             </button>
           )}
         </div>
@@ -218,22 +192,32 @@ function Calendario() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-between m-9">
-        <Partida />
-        <Partida />
-        <Partida />
+      {/* Renderiza partidas mocadas do dia */}
+      <div className="flex flex-wrap justify-center gap-6 px-6">
+        {partidasDoDia.length > 0 ? (
+          partidasDoDia.map((partida) => (
+            <Partida
+              key={partida.id}
+              campeonato={partida.campeonato}
+              horario={partida.horario}
+              status={partida.status}
+              timeA={partida.timeA}
+              timeB={partida.timeB}
+            />
+          ))
+        ) : (
+          <p className="text-gray-500 text-center w-full">
+            Nenhuma partida neste dia.
+          </p>
+        )}
       </div>
-      <hr />
-      <div className="flex flex-wrap justify-between m-9">
-        <Partida />
-        <Partida />
-        <Partida />
-      </div>
-      <hr />
+
+      <hr className="my-10" />
+
       <h2 className="text-lg font-bebas-neue-tit m-6">
         Jogos que você não pode perder
       </h2>
-      <div className="flex flex-wrap justify-between m-9">
+      <div className="flex flex-wrap justify-center gap-6 m-9">
         <Partida2tipo />
         <Partida2tipo />
         <Partida2tipo />
